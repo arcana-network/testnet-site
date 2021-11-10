@@ -7,7 +7,7 @@
             align="start"
             direction="column"
             sm-direction="column"
-            gap="1.25rem"
+            gap="1.875rem"
             sm-gap="1.25rem"
           >
             <v-heading
@@ -22,7 +22,7 @@
               class="overview-description"
               color="secondary"
               :weight="400"
-              line-height="1.5"
+              line-height="1.4"
             >
               Announcing the Arcana Testnet: Explore usecases and hunt bugs.
               This is our Alpha testnet to give developers access to our SDK,
@@ -33,7 +33,7 @@
               class="overview-description"
               color="secondary"
               :weight="400"
-              line-height="1.5"
+              line-height="1.4"
             >
               Once testnet ends, new developer signups will be put on a waitlist
               until the next Testnet.
@@ -45,8 +45,8 @@
             align="start"
             direction="column"
             sm-direction="column"
-            gap="1.875rem"
-            sm-gap="1.25rem"
+            gap="2.5rem"
+            sm-gap="1.875rem"
           >
             <v-heading
               class="overview-features-heading"
@@ -56,79 +56,86 @@
             >
               Features of Testnet
             </v-heading>
-            <v-tabs :tabs-list="tabsList">
-              <template #tab-0>
-                <v-stack direction="column" gap="3.75rem">
-                  <v-text
-                    class="feature-overview-description"
-                    color="secondary"
-                    :weight="400"
-                    line-height="1.5"
+            <div>
+              <v-tabs :tabs-list="tabsList">
+                <template #tab-0>
+                  <v-stack
+                    direction="column"
+                    sm-direction="column"
+                    gap="2.5rem"
+                    sm-gap="1.875rem"
                   >
-                    This testnet will solely focus on the SDK and its core
-                    functionality.
-                  </v-text>
-                  <v-stack justify="space-between" wrap style="width: 80vw">
-                    <div
-                      v-for="featureOverviewPoint in featureOverviewPoints"
-                      :key="featureOverviewPoint.title"
-                      class="feature-overview-points"
+                    <v-text
+                      class="feature-overview-description"
+                      color="secondary"
+                      :weight="400"
+                      line-height="1.4"
                     >
-                      <v-blurb
-                        :image="featureOverviewPoint.icon"
-                        :alt="featureOverviewPoint.title"
-                        :title="featureOverviewPoint.title"
-                        :description="featureOverviewPoint.description"
-                      />
+                      This testnet will solely focus on the SDK and its core
+                      functionality.
+                    </v-text>
+                    <div class="feature-overviews">
+                      <div
+                        v-for="featureOverviewPoint in featureOverviewPoints"
+                        :key="featureOverviewPoint.title"
+                        class="feature-overview-points"
+                      >
+                        <v-blurb
+                          :image="featureOverviewPoint.icon"
+                          :alt="featureOverviewPoint.title"
+                          :title="featureOverviewPoint.title"
+                          :description="featureOverviewPoint.description"
+                        />
+                      </div>
                     </div>
                   </v-stack>
-                </v-stack>
-              </template>
-              <template #tab-1>
-                <v-stack
-                  align="start"
-                  sm-align="start"
-                  direction="row"
-                  sm-direction="column"
-                  justify="start"
-                  sm-justify="baseline"
-                  gap="3.75rem"
-                  sm-gap="3.75rem"
-                  class="feature-capabilities"
-                >
-                  <v-chip class="feature-capabilities-dos">
-                    <v-stack direction="column" gap="2.25rem">
-                      <v-heading
-                        class="feature-capabilities-heading"
-                        :level="3"
-                        line-height="1.2"
-                      >
-                        Do&rsquo;s
-                      </v-heading>
-                      <v-list
-                        :list-items="featureCapabilitiesDoItems"
-                        variant="positive"
-                      />
-                    </v-stack>
-                  </v-chip>
-                  <v-chip class="feature-capabilities-donts">
-                    <v-stack direction="column" gap="2.25rem">
-                      <v-heading
-                        class="feature-capabilities-heading"
-                        :level="3"
-                        line-height="1.2"
-                      >
-                        Dont&rsquo;s
-                      </v-heading>
-                      <v-list
-                        :list-items="featureCapabilitiesDontItems"
-                        variant="negative"
-                      />
-                    </v-stack>
-                  </v-chip>
-                </v-stack>
-              </template>
-            </v-tabs>
+                </template>
+                <template #tab-1>
+                  <v-stack
+                    align="start"
+                    sm-align="start"
+                    direction="row"
+                    sm-direction="column"
+                    justify="start"
+                    sm-justify="baseline"
+                    gap="3.75rem"
+                    sm-gap="1.875rem"
+                    class="feature-capabilities"
+                  >
+                    <v-chip class="feature-capabilities-dos">
+                      <v-stack direction="column" gap="2.25rem">
+                        <v-heading
+                          class="feature-capabilities-heading"
+                          :level="3"
+                          line-height="1.2"
+                        >
+                          Do&rsquo;s
+                        </v-heading>
+                        <v-list
+                          :list-items="featureCapabilitiesDoItems"
+                          variant="positive"
+                        />
+                      </v-stack>
+                    </v-chip>
+                    <v-chip class="feature-capabilities-donts">
+                      <v-stack direction="column" gap="2.25rem">
+                        <v-heading
+                          class="feature-capabilities-heading"
+                          :level="3"
+                          line-height="1.2"
+                        >
+                          Dont&rsquo;s
+                        </v-heading>
+                        <v-list
+                          :list-items="featureCapabilitiesDontItems"
+                          variant="negative"
+                        />
+                      </v-stack>
+                    </v-chip>
+                  </v-stack>
+                </template>
+              </v-tabs>
+            </div>
           </v-stack>
         </div>
         <div class="feature-overview-illustration full-bleed" />
@@ -214,7 +221,7 @@ export default {
 
 .overview-description {
   max-width: 46ch;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
 
   @media (--viewport-small) {
     font-size: 1rem;
@@ -233,7 +240,7 @@ export default {
 }
 
 .feature-overview-description {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   max-width: 46ch;
 
   @media (--viewport-small) {
@@ -241,15 +248,25 @@ export default {
   }
 }
 
-.feature-overview-points {
-  width: 20%;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
+.feature-overviews {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(5, 1fr);
 
   @media (--viewport-medium) {
-    width: 50%;
+    grid-gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (--viewport-small) {
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature-overview-points {
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-overview-points > * {
@@ -294,26 +311,20 @@ export default {
   }
 }
 
-.feature-capabilities {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .feature-capabilities-dos,
 .feature-capabilities-donts {
   max-width: 36rem !important;
   padding: 2rem !important;
 
   @media (--viewport-small) {
-    background: transparent !important;
-    padding: inherit !important;
+    padding: 1rem !important;
   }
 }
 
 .feature-capabilities-heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.25rem;
+  font-size: 2.1875rem;
   font-weight: 700;
   letter-spacing: normal;
 
