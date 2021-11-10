@@ -39,12 +39,7 @@
 }
 
 body {
-  background: var(--dark-theme-bg)
-    radial-gradient(
-      967.28% 288.75% at -2.92% 117.8%,
-      #060606 0%,
-      rgba(18, 18, 18, 0.7) 100%
-    );
+  background: #0f0908;
   overflow-x: hidden;
   min-height: 100vh;
 }
