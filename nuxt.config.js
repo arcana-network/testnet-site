@@ -1,48 +1,73 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  env: process.env,
+
   head: {
-    title: 'testnet-website',
+    title: 'Testnet - Arcana Network',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: ['~/assets/css/normalize.css', '~/assets/css/styles.css'],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: ['~/components', '~/components/lib'],
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-fonts',
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: ['@nuxtjs/gtm'],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  gtm: {
+    id: process.env.GOOGLE_TAG_MANAGER_ID,
+    enabled: process.env.NODE_ENV === 'production',
+    debug: process.env.NODE_ENV === 'development',
+    pageTracking: true,
+    pageViewEventName: 'page-view',
+  },
+
+  axios: {},
+
+  content: {},
+
   build: {
-  }
+    postcss: {
+      order: 'presetEnvAndCssnanoLast',
+      preset: {
+        stage: 0,
+      },
+      plugins: {
+        'postcss-import': true,
+        'postcss-url': true,
+        'postcss-preset-env': {
+          stage: 0,
+        },
+        cssnano: { preset: 'default' },
+      },
+    },
+  },
+
+  googleFonts: {
+    families: {
+      Montserrat: [500, 600, 700],
+      Sora: [300, 400, 600, 700],
+    },
+    display: 'block',
+    prefetch: true,
+    preconnect: true,
+    preload: true,
+  },
 }

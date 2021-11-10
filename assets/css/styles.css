@@ -1,0 +1,88 @@
+:root {
+  --color-blue: #13a3fd;
+  --color-black: #141414;
+  --color-white: #fff;
+  --color-grey: #8d8d8d;
+  --color-green: #8fff00;
+  --color-yellow: #ffc226;
+  --color-orange: #ff6826;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Sora', sans-serif;
+  --dark-theme-bg: #333;
+}
+
+/* Custom Scrollbar for all elements */
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+*::-webkit-scrollbar-track {
+  background: linear-gradient(143.36deg, #000 -4.7%, #000 115.05%);
+  box-shadow: inset -2px -2px 4px rgba(80, 80, 80, 0.1),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.21),
+    inset -10px -26px 33px -28px rgba(255, 255, 255, 0.1),
+    inset -50px 49px 29px 22px rgba(28, 28, 28, 0.84);
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  width: 0.375rem;
+  height: 0.375rem;
+  background: #fff;
+  border-radius: 10px;
+  outline: none;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #8d8d8d;
+}
+*::-webkit-scrollbar-thumb:active {
+  background: #404040;
+}
+
+body {
+  background: var(--dark-theme-bg)
+    radial-gradient(
+      967.28% 288.75% at -2.92% 117.8%,
+      #060606 0%,
+      rgba(18, 18, 18, 0.7) 100%
+    );
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.color-primary {
+  color: var(--color-white);
+}
+.color-secondary {
+  color: var(--color-grey);
+}
+.color-link {
+  color: var(--color-blue);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
