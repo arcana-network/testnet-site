@@ -28,7 +28,7 @@ export default {
         {
           title: 'Bug Report Process and Bug Severity Level',
           description: [
-            'Only bugs that are reported through the links provided will be considered. Bugs sent through emails, DMs, and other media will not be counted as part of the Bug Bounty Program.',
+            'Only bugs that are reported through the forum will be considered. Bugs sent through emails, DMs, and other media will not be counted as part of the Bug Bounty Program.',
             'Early bird gets the bounty: The first person to accurately report a bug will be considered for the reward. Reports that are incomplete will not be considered. Each bug reported will only be rewarded once.',
             "Reported bugs are eligible if they haven't been reported publicly first.",
           ],

@@ -23,9 +23,9 @@
         </v-text>
         <v-text class="footer-text" line-height="1.5" :weight="400">
           Arcana's Testnet is only meant for experimentation and not for running
-          apps in production. We expect participating developers to cooperate in
-          sharing logs, metrics, and other data related to bugs/feature
-          suggestions, in order to help improve the Arcana Network.
+          apps in production. We expect participating bounty hunters to
+          cooperate in sharing logs, metrics, and other data related to
+          bugs/feature suggestions, in order to help improve the Arcana Network.
         </v-text>
       </v-stack>
     </v-container>

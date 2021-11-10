@@ -24,10 +24,8 @@
               :weight="400"
               line-height="1.4"
             >
-              Announcing the Arcana Testnet: Explore usecases and hunt bugs.
-              This is our Alpha testnet to give developers access to our SDK,
-              explore new usecases, and help improve Arcana Network ahead of
-              mainnet launch.
+              The future of privacy is now! <br />
+              Quantum Descent has begun.
             </v-text>
             <v-text
               class="overview-description"
@@ -35,108 +33,90 @@
               :weight="400"
               line-height="1.4"
             >
-              Once testnet ends, new developer signups will be put on a waitlist
-              until the next Testnet.
+              Get access to our SDK, explore use cases, and improve the Arcana
+              Network.
             </v-text>
           </v-stack>
         </div>
         <div>
-          <v-stack
-            align="start"
-            direction="column"
-            sm-direction="column"
-            gap="2.5rem"
-            sm-gap="1.875rem"
-          >
-            <v-heading
-              class="overview-features-heading"
-              :level="3"
-              line-height="1.2"
-              :weight="600"
-            >
-              Features of Testnet
-            </v-heading>
-            <div>
-              <v-tabs :tabs-list="tabsList">
-                <template #tab-0>
-                  <v-stack
-                    direction="column"
-                    sm-direction="column"
-                    gap="2.5rem"
-                    sm-gap="1.875rem"
+          <v-tabs :tabs-list="tabsList">
+            <template #tab-0>
+              <v-stack
+                direction="column"
+                sm-direction="column"
+                gap="2.5rem"
+                sm-gap="1.875rem"
+              >
+                <v-text
+                  class="feature-overview-description"
+                  color="secondary"
+                  :weight="400"
+                  line-height="1.4"
+                >
+                  A feature-packed SDK for secure storage, access and
+                  authentication.
+                </v-text>
+                <div class="feature-overviews">
+                  <div
+                    v-for="featureOverviewPoint in featureOverviewPoints"
+                    :key="featureOverviewPoint.title"
+                    class="feature-overview-points"
                   >
-                    <v-text
-                      class="feature-overview-description"
-                      color="secondary"
-                      :weight="400"
-                      line-height="1.4"
+                    <v-blurb
+                      :image="featureOverviewPoint.icon"
+                      :alt="featureOverviewPoint.title"
+                      :title="featureOverviewPoint.title"
+                      :description="featureOverviewPoint.description"
+                    />
+                  </div>
+                </div>
+              </v-stack>
+            </template>
+            <template #tab-1>
+              <v-stack
+                align="start"
+                sm-align="start"
+                direction="row"
+                sm-direction="column"
+                justify="start"
+                sm-justify="baseline"
+                gap="3.75rem"
+                sm-gap="1.875rem"
+                class="feature-capabilities"
+              >
+                <v-chip class="feature-capabilities-dos">
+                  <v-stack direction="column" gap="2.25rem">
+                    <v-heading
+                      class="feature-capabilities-heading"
+                      :level="3"
+                      line-height="1.2"
                     >
-                      This testnet will solely focus on the SDK and its core
-                      functionality.
-                    </v-text>
-                    <div class="feature-overviews">
-                      <div
-                        v-for="featureOverviewPoint in featureOverviewPoints"
-                        :key="featureOverviewPoint.title"
-                        class="feature-overview-points"
-                      >
-                        <v-blurb
-                          :image="featureOverviewPoint.icon"
-                          :alt="featureOverviewPoint.title"
-                          :title="featureOverviewPoint.title"
-                          :description="featureOverviewPoint.description"
-                        />
-                      </div>
-                    </div>
+                      Do&rsquo;s
+                    </v-heading>
+                    <v-list
+                      :list-items="featureCapabilitiesDoItems"
+                      variant="positive"
+                    />
                   </v-stack>
-                </template>
-                <template #tab-1>
-                  <v-stack
-                    align="start"
-                    sm-align="start"
-                    direction="row"
-                    sm-direction="column"
-                    justify="start"
-                    sm-justify="baseline"
-                    gap="3.75rem"
-                    sm-gap="1.875rem"
-                    class="feature-capabilities"
-                  >
-                    <v-chip class="feature-capabilities-dos">
-                      <v-stack direction="column" gap="2.25rem">
-                        <v-heading
-                          class="feature-capabilities-heading"
-                          :level="3"
-                          line-height="1.2"
-                        >
-                          Do&rsquo;s
-                        </v-heading>
-                        <v-list
-                          :list-items="featureCapabilitiesDoItems"
-                          variant="positive"
-                        />
-                      </v-stack>
-                    </v-chip>
-                    <v-chip class="feature-capabilities-donts">
-                      <v-stack direction="column" gap="2.25rem">
-                        <v-heading
-                          class="feature-capabilities-heading"
-                          :level="3"
-                          line-height="1.2"
-                        >
-                          Dont&rsquo;s
-                        </v-heading>
-                        <v-list
-                          :list-items="featureCapabilitiesDontItems"
-                          variant="negative"
-                        />
-                      </v-stack>
-                    </v-chip>
+                </v-chip>
+                <v-chip class="feature-capabilities-donts">
+                  <v-stack direction="column" gap="2.25rem">
+                    <v-heading
+                      class="feature-capabilities-heading"
+                      :level="3"
+                      line-height="1.2"
+                    >
+                      Dont&rsquo;s
+                    </v-heading>
+                    <v-list
+                      :list-items="featureCapabilitiesDontItems"
+                      variant="negative"
+                    />
                   </v-stack>
-                </template>
-              </v-tabs>
-            </div>
-          </v-stack>
+                </v-chip>
+              </v-stack>
+            </template>
+          </v-tabs>
         </div>
         <div class="feature-overview-illustration full-bleed" />
       </v-stack>
@@ -149,7 +129,7 @@ export default {
   name: 'OverviewSection',
   data() {
     return {
-      tabsList: ['Overview', 'Capabilities'],
+      tabsList: ['Features', 'Capabilities'],
       featureOverviewPoints: [
         {
           icon: 'images/login.svg',
@@ -220,7 +200,7 @@ export default {
 }
 
 .overview-description {
-  max-width: 46ch;
+  max-width: 52ch;
   font-size: 1.25rem;
 
   @media (--viewport-small) {
@@ -241,7 +221,7 @@ export default {
 
 .feature-overview-description {
   font-size: 1.25rem;
-  max-width: 46ch;
+  max-width: 50ch;
 
   @media (--viewport-small) {
     font-size: 1rem;
