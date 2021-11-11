@@ -18,6 +18,14 @@
         >
           <v-heading
             class="hero-section-heading"
+            color="secondary"
+            line-height="1.2"
+            :weight="400"
+          >
+            Welcome to the Arcana Alpha Testnet Launch
+          </v-heading>
+          <v-heading
+            class="hero-section-heading-em"
             :level="1"
             :weight="700"
             line-height="1.2"
@@ -33,22 +41,6 @@
               gap="1.25rem"
               sm-gap="1.25rem"
             >
-              <v-text
-                class="hero-section-description"
-                color="secondary"
-                line-height="1.5"
-                :weight="400"
-              >
-                Welcome to <br />
-                <v-text
-                  class="hero-section-description-em"
-                  color="secondary"
-                  line-height="1.5"
-                  :weight="700"
-                >
-                  Arcana Alpha Testnet Launch
-                </v-text>
-              </v-text>
               <v-text
                 class="hero-section-launch"
                 line-height="1.5"
@@ -132,30 +124,21 @@ section {
 .hero-section-heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1.75rem;
+
+  @media (--viewport-small) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.hero-section-heading-em {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 4rem;
 
   @media (--viewport-small) {
     font-size: 2.1875rem;
-    text-align: center;
-  }
-}
-
-.hero-section-description {
-  max-width: 38ch;
-  font-size: 1.375rem;
-
-  @media (--viewport-small) {
-    font-size: 1rem;
-    text-align: center;
-    max-width: 30ch;
-  }
-}
-
-.hero-section-description-em {
-  font-size: 1.5rem;
-
-  @media (--viewport-small) {
-    font-size: 1rem;
     text-align: center;
   }
 }

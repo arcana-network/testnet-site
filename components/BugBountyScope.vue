@@ -6,8 +6,8 @@
     sm-direction="column"
     justify="start"
     sm-justify="baseline"
-    gap="3.75rem"
-    sm-gap="3.75rem"
+    gap="3rem"
+    sm-gap="1.875rem"
     class="bug-bounty-scope"
   >
     <v-chip class="bug-bounty-scope-in">
@@ -62,12 +62,16 @@ export default {
 <style lang="postcss" scoped>
 .bug-bounty-scope-in,
 .bug-bounty-scope-out {
-  max-width: 36rem !important;
+  max-width: unset;
+  width: 50%;
+  min-height: 25rem;
   padding: 2rem !important;
 
   @media (--viewport-small) {
-    background: transparent !important;
-    padding: inherit !important;
+    padding: 1rem !important;
+    max-width: unset;
+    min-height: unset;
+    width: calc(100% - 2rem);
   }
 }
 

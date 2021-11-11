@@ -73,7 +73,7 @@
                 sm-direction="column"
                 justify="start"
                 sm-justify="baseline"
-                gap="3.75rem"
+                gap="3rem"
                 sm-gap="1.875rem"
                 class="feature-capabilities"
               >
@@ -282,11 +282,16 @@ export default {
 
 .feature-capabilities-dos,
 .feature-capabilities-donts {
-  max-width: 27rem !important;
+  max-width: unset;
+  width: 50%;
+  min-height: 25rem;
   padding: 2rem !important;
 
   @media (--viewport-small) {
     padding: 1rem !important;
+    max-width: unset;
+    min-height: unset;
+    width: calc(100% - 2rem);
   }
 }
 
