@@ -43,19 +43,21 @@
                 <v-stack
                   direction="column"
                   sm-direction="column"
-                  gap="1.25rem"
+                  gap="1rem"
                   sm-gap="0.625rem"
                 >
-                  <v-text
-                    class="build-feature-card-text"
+                  <v-heading
+                    class="build-feature-card-title"
+                    :level="4"
                     :weight="600"
-                    line-height="1.5"
                   >
                     {{ feature.title }}
-                  </v-text>
+                  </v-heading>
                   <v-text
                     class="build-feature-card-text"
                     :weight="400"
+                    color="secondary"
+                    size="1rem"
                     line-height="1.4"
                   >
                     {{ feature.description }}
@@ -154,12 +156,15 @@ export default {
   }
 }
 
-.build-feature-card-text {
-  font-size: 1.25rem;
-  max-width: 30ch;
+.build-feature-card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 
-  @media (--viewport-small) {
+  @media (--viewport-medium) {
     font-size: 1rem;
+    line-height: 1.125rem;
   }
 }
 </style>
