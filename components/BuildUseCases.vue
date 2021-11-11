@@ -21,7 +21,7 @@
       <v-text
         class="build-usecases-description"
         color="secondary"
-        line-height="1.5"
+        line-height="1.4"
         :weight="400"
       >
         {{ useCase.description }}
@@ -69,16 +69,12 @@ export default {
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
 
-.build-usecases {
-  margin-top: 1.875rem;
-}
-
 .build-usecases-heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.25rem;
+  font-size: 2.1875rem;
   font-weight: 700;
-  min-width: 12rem;
+  min-width: 10rem;
   letter-spacing: normal;
 
   @media (--viewport-small) {
@@ -88,7 +84,7 @@ export default {
 }
 
 .build-usecases-description {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   max-width: 42ch;
 
   @media (--viewport-small) {

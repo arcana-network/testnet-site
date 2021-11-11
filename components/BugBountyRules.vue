@@ -1,7 +1,5 @@
 <template>
-  <div class="bug-bounty-rules">
-    <v-list :list-items="rulesListItems" />
-  </div>
+  <v-list :list-items="rulesListItems" />
 </template>
 
 <script>
@@ -39,12 +37,3 @@ export default {
   },
 }
 </script>
-
-<style lang="postcss" scoped>
-@import url('./lib/media-query-helper.css');
-
-.bug-bounty-rules {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-</style>

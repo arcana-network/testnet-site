@@ -4,7 +4,7 @@
       class="bug-bounty-overview-description"
       color="secondary"
       :weight="400"
-      line-height="1.5"
+      line-height="1.4"
     >
       We're looking for Bounty Hunters to find bugs in our User Interface, and
       test the functionalities of our SDK.
@@ -13,7 +13,7 @@
       class="bug-bounty-overview-description"
       color="secondary"
       :weight="400"
-      line-height="1.5"
+      line-height="1.4"
     >
       If you're a developer with a knack for testing SDKs and APIs - participate
       in our Bug Bounty Program, from anywhere in the world. Win from a pool of
@@ -23,7 +23,7 @@
       class="bug-bounty-overview-description"
       color="secondary"
       :weight="400"
-      line-height="1.5"
+      line-height="1.4"
     >
       The bug bounty will begin on the 17th of November, and last for a 4 week
       timeframe. Signup on the Developer Dashboard, checkout our documentation
@@ -33,7 +33,7 @@
       class="bug-bounty-overview-description"
       color="secondary"
       :weight="400"
-      line-height="1.5"
+      line-height="1.4"
     >
       Before submitting your bug, you'll need to prepare the following:
     </v-text>
@@ -74,8 +74,8 @@ export default {
 }
 
 .bug-bounty-overview-description {
-  max-width: 46ch;
-  font-size: 1.375rem;
+  max-width: 50ch;
+  font-size: 1.25rem;
 
   @media (--viewport-small) {
     font-size: 1rem;

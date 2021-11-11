@@ -5,8 +5,8 @@
         align="start"
         direction="column"
         sm-direction="column"
-        gap="30px"
-        sm-gap="20px"
+        gap="2.5rem"
+        sm-gap="1.875rem"
       >
         <v-heading
           class="build-heading"
@@ -16,18 +16,19 @@
         >
           Build dApps
         </v-heading>
-        <v-tabs :tabs-list="tabsList">
-          <template #tab-0>
-            <build-overview />
-          </template>
-          <template #tab-1>
-            <build-use-cases />
-          </template>
-          <template #tab-2>
-            <build-support />
-          </template>
-        </v-tabs>
-
+        <div>
+          <v-tabs :tabs-list="tabsList">
+            <template #tab-0>
+              <build-overview />
+            </template>
+            <template #tab-1>
+              <build-use-cases />
+            </template>
+            <template #tab-2>
+              <build-support />
+            </template>
+          </v-tabs>
+        </div>
         <div class="build-illustration full-bleed" />
       </v-stack>
     </v-container>
@@ -48,13 +49,21 @@ export default {
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
 
+section {
+  margin-top: -5rem !important;
+
+  @media (--viewport-small) {
+    margin-top: 2rem !important;
+  }
+}
+
 .build-heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 4rem;
+  font-size: 3.125rem;
 
   @media (--viewport-small) {
-    font-size: 2.25rem;
+    font-size: 2.1875rem;
   }
 }
 

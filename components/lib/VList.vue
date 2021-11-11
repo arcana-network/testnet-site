@@ -147,7 +147,7 @@ export default {
 }
 
 .list-item-description {
-  max-width: 45ch;
+  max-width: 50ch;
 }
 
 .list-item-description[data-variant='outlined'] {
