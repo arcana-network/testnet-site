@@ -11,8 +11,8 @@
       :weight="400"
       line-height="1.4"
     >
-      Descend into the Arcana Quantum Verse. Build your Decentralised
-      Applications with Arcana's Storage & Privacy Stack.
+      Descend into the Arcana Quantum Verse. Build your decentralised
+      applications with Arcana's storage & privacy stack.
     </v-text>
     <div>
       <v-stack direction="column" gap="1.25rem">
@@ -83,7 +83,7 @@ export default {
           image: 'images/identity.svg',
           title: 'Identity and Access Management',
           description:
-            'Add seamless user authentication and key generation with Social Login. No metamask or wallet required.',
+            'Add seamless user authentication and key generation with social login. No MetaMask or wallet required.',
         },
         {
           name: 'storage',
@@ -97,14 +97,14 @@ export default {
           image: 'images/encryption.svg',
           title: 'End-to-End Encryption',
           description:
-            'Share encrypted data and define access policies through our DIDs (Access control helps share data with other apps and users, trust-free).',
+            'Share encrypted data and define access policies through our DIDs. Access control helps share data with other apps and users, trust-free.',
         },
         {
           name: 'keys',
           image: 'images/keys.svg',
           title: 'Non-custodial Key Management',
           description:
-            'Securely exchange, generate and store keys that belong to users (without having to trust a 3rd party).',
+            'Securely exchange, generate, and store keys that belong to users without having to trust a 3rd party.',
         },
       ],
     }

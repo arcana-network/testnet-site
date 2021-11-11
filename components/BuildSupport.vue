@@ -1,5 +1,6 @@
 <template>
   <v-stack
+    class="build-support"
     direction="column"
     sm-direction="column"
     gap="1.875rem"
@@ -34,7 +35,7 @@
           hello@arcana.network
         </v-text>
       </a>
-      <v-stack style="margin-top: 3rem" md-justify="space-evenly">
+      <v-stack style="margin-top: 2rem" md-justify="space-evenly">
         <a href="https://twitter.com/arcananetwork" target="__blank">
           <v-image
             path="images/twitter-white.svg"
@@ -78,6 +79,10 @@ export default {
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
 
+.build-support {
+  margin-top: 1.875rem;
+}
+
 .build-support-heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -90,7 +95,6 @@ export default {
 }
 
 .build-support-description {
-  max-width: 46ch;
   font-size: 1.25rem;
 
   @media (--viewport-small) {
@@ -114,7 +118,7 @@ a {
 }
 
 .build-support-social-link {
-  width: 3rem;
+  width: 2rem;
 }
 
 .dn {

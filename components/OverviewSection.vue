@@ -24,15 +24,8 @@
               :weight="400"
               line-height="1.4"
             >
-              The future of privacy is now! <br />
-              Quantum Descent has begun.
-            </v-text>
-            <v-text
-              class="overview-description"
-              color="secondary"
-              :weight="400"
-              line-height="1.4"
-            >
+              The future of privacy is now! Quantum Descent has begun.
+              <br />
               Get access to our SDK, explore use cases, and improve the Arcana
               Network.
             </v-text>
@@ -53,7 +46,7 @@
                   :weight="400"
                   line-height="1.4"
                 >
-                  A feature-packed SDK for secure storage, access and
+                  A feature-packed SDK for secure storage, access, and
                   authentication.
                 </v-text>
                 <div class="feature-overviews">
@@ -135,13 +128,13 @@ export default {
           icon: 'images/login.svg',
           title: 'Login',
           description:
-            'Allow users to signup with Social Auth, frictionless UX',
+            'Allow users to sign up with social auth, frictionless UX',
         },
         {
           icon: 'images/share.svg',
           title: 'Share',
           description:
-            'Define permissions and Share data with others on-chain with just an email ID or public address',
+            'Define permissions and share data with others on-chain with just an email ID or public address',
         },
         {
           icon: 'images/revoke.svg',
@@ -153,22 +146,18 @@ export default {
           icon: 'images/upload.svg',
           title: 'Upload',
           description:
-            'Upload data with unique DIDs and add on or more users who can access it',
+            'Upload data with unique DIDs and add one or more users who can access it',
         },
         {
           icon: 'images/download.svg',
           title: 'Download',
           description:
-            'Download data from DID links, verify permission and decrypt data',
+            'Download data from DID links, verify permission, and decrypt data',
         },
       ],
       featureCapabilitiesDoItems: [
         { description: 'Create test accounts.' },
         { description: 'Develop new use cases.' },
-        {
-          description:
-            'Test the integration / migration from existing infrastructure like IPFS and MetaMask.',
-        },
         { description: 'Test access control and data integrity.' },
         { description: 'Report bugs and share feedback.' },
       ],
@@ -293,7 +282,7 @@ export default {
 
 .feature-capabilities-dos,
 .feature-capabilities-donts {
-  max-width: 36rem !important;
+  max-width: 27rem !important;
   padding: 2rem !important;
 
   @media (--viewport-small) {

@@ -45,12 +45,12 @@ export default {
       inScopeItems: [
         { description: 'Non-technical and UI bugs' },
         { description: 'Developer Dashboard' },
-        { description: 'Developer Signup and Login' },
+        { description: 'Developer sign up and login' },
         { description: 'SDK configuration and app creation' },
       ],
       outOfScopeItems: [
-        { description: 'Vulnerabilities in Codebase' },
-        { description: 'Bugs in Codebase' },
+        { description: 'Vulnerabilities in codebase' },
+        { description: 'Bugs in codebase' },
         { description: 'Resistance to DDoS attacks' },
         { description: 'Scalability and performance of the network' },
       ],

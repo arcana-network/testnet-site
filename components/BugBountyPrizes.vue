@@ -54,7 +54,6 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 .bug-bounty-prizes {
-  margin-top: 2rem;
   margin-bottom: 2rem;
   display: grid;
   grid-gap: 2.5rem 3.75rem;

@@ -52,7 +52,7 @@ export default {
           key: 'file-sharing',
           heading: 'File Sharing',
           description:
-            'Securely store, share, and delete files. Decide who gets access and for how long. Track all actions on the file onchain.',
+            'Securely store, share, and delete files. Decide who gets access and for how long. Track all actions on the file on-chain.',
         },
         {
           name: 'identity',
@@ -68,6 +68,10 @@ export default {
 
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
+
+.build-usecases {
+  margin-top: 1.875rem;
+}
 
 .build-usecases-heading {
   margin-top: 0;

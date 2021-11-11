@@ -21,7 +21,7 @@ export default {
         {
           title: 'Do Not Attack or Defraud Arcana Network',
           description:
-            'This includes the Arcana team, operations, or technology (e.g. DDOS attacks, spam and social engineering).',
+            'This includes the Arcana team, operations, or technology (e.g. DDOS attacks, spam, and social engineering).',
         },
         {
           title: 'Bug Report Process and Bug Severity Level',

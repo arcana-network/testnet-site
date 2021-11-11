@@ -6,7 +6,7 @@
       :weight="400"
       line-height="1.4"
     >
-      We're looking for Bounty Hunters to find bugs in our User Interface, and
+      We're looking for Bounty Hunters to find bugs in our user interface, and
       test the functionalities of our SDK.
     </v-text>
     <v-text
@@ -26,7 +26,7 @@
       line-height="1.4"
     >
       The bug bounty will begin on the 17th of November, and last for a 4 week
-      timeframe. Signup on the Developer Dashboard, checkout our documentation
+      timeframe. Signup on the Developer Dashboard, check out our documentation
       and get going!
     </v-text>
     <v-text
