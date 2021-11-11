@@ -1,26 +1,37 @@
 <template>
-  <v-stack direction="column" align="center" style="text-align: center">
+  <v-stack
+    direction="column"
+    align="center"
+    gap="1.25rem"
+    style="text-align: center"
+  >
     <v-image v-if="image" :path="image" :alt="alt" />
     <slot v-else name="art"></slot>
-    <v-heading v-if="title" :level="4" :weight="600" class="blurb-title">
-      {{ title }}
-    </v-heading>
-    <div v-if="lineBreaks">
-      <div
-        v-for="lineBreak in lineBreaks"
-        :key="lineBreak"
-        style="margin-top: 1.4rem"
-      />
+    <div>
+      <v-stack direction="column" gap="0.625rem">
+        <v-heading v-if="title" :level="4" :weight="600" class="blurb-title">
+          {{ title }}
+        </v-heading>
+        <div v-if="lineBreaks">
+          <div
+            v-for="lineBreak in lineBreaks"
+            :key="lineBreak"
+            style="margin-top: 1.4rem"
+          />
+        </div>
+        <v-text
+          v-if="description"
+          font="serif"
+          color="secondary"
+          :weight="400"
+          size="1rem"
+          line-height="1.4"
+          class="blurb-description"
+        >
+          {{ description }}
+        </v-text>
+      </v-stack>
     </div>
-    <v-text
-      v-if="description"
-      font="serif"
-      color="secondary"
-      :weight="400"
-      class="blurb-description"
-    >
-      {{ description }}
-    </v-text>
   </v-stack>
 </template>
 
@@ -60,22 +71,14 @@ img {
 }
 
 .blurb-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 1.125rem;
   line-height: 1.375rem;
 
   @media (--viewport-medium) {
     font-size: 1rem;
     line-height: 1.125rem;
-  }
-}
-
-.blurb-description {
-  font-size: 1rem;
-  line-height: 1.25rem;
-
-  @media (--viewport-medium) {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 </style>

@@ -22,7 +22,7 @@
           class="list-item-description"
           color="secondary"
           :data-variant="listItem.variant"
-          line-height="1.5"
+          line-height="1.4"
           :weight="400"
         >
           {{ listItem.description }}
@@ -38,7 +38,7 @@
             class="list-item-description"
             color="secondary"
             :data-variant="listItem.variant"
-            line-height="1.5"
+            line-height="1.4"
             :weight="400"
           >
             {{ descriptionLine }}
@@ -139,15 +139,15 @@ export default {
 
 .list-item-title,
 .list-item-description {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
 
   @media (--viewport-small) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
 .list-item-description {
-  max-width: 45ch;
+  max-width: 50ch;
 }
 
 .list-item-description[data-variant='outlined'] {

@@ -1,59 +1,43 @@
 <template>
-  <v-stack direction="column" gap="3.75rem">
-    <v-stack direction="column" gap="1.25rem">
-      <v-text
-        class="bug-bounty-overview-description"
-        color="secondary"
-        :weight="400"
-        line-height="1.5"
-      >
-        We're looking for Bounty Hunters to find bugs in our User Interface, and
-        test the functionalities of our SDK.
-      </v-text>
-      <v-text
-        class="bug-bounty-overview-description"
-        color="secondary"
-        :weight="400"
-        line-height="1.5"
-      >
-        If you're a developer with a knack for testing SDKs and APIs -
-        participate in our Bug Bounty Program, from anywhere in the world. Win
-        from a pool of 50,000 USD or 25,000 USD in XAR token rewards.
-      </v-text>
-      <v-text
-        class="bug-bounty-overview-description"
-        color="secondary"
-        :weight="400"
-        line-height="1.5"
-      >
-        The bug bounty will begin on the 17th of November, and last for a 4 week
-        timeframe. Signup on the Developer Dashboard, checkout our documentation
-        and get going!
-      </v-text>
-    </v-stack>
-    <div>
-      <v-stack direction="column" gap="1.25rem">
-        <v-heading
-          class="bug-bounty-overview-heading"
-          :level="3"
-          line-height="1.2"
-        >
-          Next Steps
-        </v-heading>
-        <v-text
-          class="bug-bounty-overview-description"
-          color="secondary"
-          :weight="400"
-          line-height="1.5"
-        >
-          The bug bounty will start on 17th November and last for four weeks.
-          The main scope of the program is to find bugs in UI and
-          functionalities of SDK's APIs. Before submitting your bug to the
-          typeform/google form, prepare the following details.
-        </v-text>
-        <v-list :list-items="stepsList" />
-      </v-stack>
-    </div>
+  <v-stack direction="column" gap="1.25rem">
+    <v-text
+      class="bug-bounty-overview-description"
+      color="secondary"
+      :weight="400"
+      line-height="1.4"
+    >
+      We're looking for Bounty Hunters to find bugs in our User Interface, and
+      test the functionalities of our SDK.
+    </v-text>
+    <v-text
+      class="bug-bounty-overview-description"
+      color="secondary"
+      :weight="400"
+      line-height="1.4"
+    >
+      If you're a developer with a knack for testing SDKs and APIs - participate
+      in our Bug Bounty Program, from anywhere in the world. Win from a pool of
+      25,000 USDT in rewards.
+    </v-text>
+    <v-text
+      class="bug-bounty-overview-description"
+      color="secondary"
+      :weight="400"
+      line-height="1.4"
+    >
+      The bug bounty will begin on the 17th of November, and last for a 4 week
+      timeframe. Signup on the Developer Dashboard, checkout our documentation
+      and get going!
+    </v-text>
+    <v-text
+      class="bug-bounty-overview-description"
+      color="secondary"
+      :weight="400"
+      line-height="1.4"
+    >
+      Before submitting your bug, you'll need to prepare the following:
+    </v-text>
+    <v-list :list-items="stepsList" />
   </v-stack>
 </template>
 
@@ -63,11 +47,9 @@ export default {
   data() {
     return {
       stepsList: [
-        { description: 'Feature the bug belongs to' },
         { description: 'Description of the bug' },
         { description: 'Steps to reproduce' },
         { description: 'Supporting material or references' },
-        { description: 'Severity of the bug' },
         { description: 'Your Email ID, Telegram and Twitter handles' },
       ],
     }
@@ -92,8 +74,8 @@ export default {
 }
 
 .bug-bounty-overview-description {
-  max-width: 46ch;
-  font-size: 1.375rem;
+  max-width: 50ch;
+  font-size: 1.25rem;
 
   @media (--viewport-small) {
     font-size: 1rem;

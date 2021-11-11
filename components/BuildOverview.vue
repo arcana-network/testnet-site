@@ -1,10 +1,15 @@
 <template>
-  <v-stack direction="column" gap="3.75rem">
+  <v-stack
+    direction="column"
+    sm-direction="column"
+    gap="3.75rem"
+    sm-gam="3.125rem"
+  >
     <v-text
       class="build-overview-description"
       color="secondary"
       :weight="400"
-      line-height="1.5"
+      line-height="1.4"
     >
       Descend into the Arcana Quantum Verse. Build your Decentralised
       Applications with Arcana's Storage & Privacy Stack.
@@ -34,13 +39,29 @@
               sm-gap="1.25rem"
             >
               <v-image class="build-feature-card-icon" :path="feature.image" />
-              <v-text
-                class="build-feature-card-text"
-                :weight="400"
-                line-height="1.5"
-              >
-                {{ feature.description }}
-              </v-text>
+              <div>
+                <v-stack
+                  direction="column"
+                  sm-direction="column"
+                  gap="1.25rem"
+                  sm-gap="0.625rem"
+                >
+                  <v-text
+                    class="build-feature-card-text"
+                    :weight="600"
+                    line-height="1.5"
+                  >
+                    {{ feature.title }}
+                  </v-text>
+                  <v-text
+                    class="build-feature-card-text"
+                    :weight="400"
+                    line-height="1.4"
+                  >
+                    {{ feature.description }}
+                  </v-text>
+                </v-stack>
+              </div>
             </v-stack>
           </v-card>
         </div>
@@ -58,24 +79,28 @@ export default {
         {
           name: 'identity',
           image: 'images/identity.svg',
+          title: 'Identity and Access Management',
           description:
             'Add seamless user authentication and key generation with Social Login. No metamask or wallet required.',
         },
         {
           name: 'storage',
           image: 'images/storage.svg',
+          title: 'Decentralised Storage',
           description:
             'Store end-to-end encrypted data on a decentralized network.',
         },
         {
           name: 'encryption',
           image: 'images/encryption.svg',
+          title: 'End-to-End Encryption',
           description:
             'Share encrypted data and define access policies through our DIDs (Access control helps share data with other apps and users, trust-free).',
         },
         {
           name: 'keys',
           image: 'images/keys.svg',
+          title: 'Non-custodial Key Management',
           description:
             'Securely exchange, generate and store keys that belong to users (without having to trust a 3rd party).',
         },
@@ -102,8 +127,8 @@ export default {
 }
 
 .build-overview-description {
-  max-width: 46ch;
-  font-size: 1.375rem;
+  max-width: 50ch;
+  font-size: 1.25rem;
 
   @media (--viewport-small) {
     font-size: 1rem;
@@ -130,7 +155,7 @@ export default {
 }
 
 .build-feature-card-text {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   max-width: 30ch;
 
   @media (--viewport-small) {

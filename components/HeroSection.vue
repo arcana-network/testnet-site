@@ -39,15 +39,23 @@
                 line-height="1.5"
                 :weight="400"
               >
-                Descend into the Arcana Testnet and ready our Network for
-                Mainnet Arrival.
+                Welcome to <br />
+                <v-text
+                  class="hero-section-description-em"
+                  color="secondary"
+                  line-height="1.5"
+                  :weight="700"
+                >
+                  Arcana Alpha Testnet: Quantum Descent
+                </v-text>
               </v-text>
               <v-text
                 class="hero-section-launch"
                 line-height="1.5"
                 :weight="700"
               >
-                Launching on 17th November, 2021
+                Developers, your $25k bounty in the unknown awaits from Nov 17th
+                – Dec 17th, 2021.
               </v-text>
             </v-stack>
           </div>
@@ -106,6 +114,7 @@ section {
 
   @media (--viewport-small) {
     height: auto;
+    min-height: unset;
   }
 }
 
@@ -142,8 +151,18 @@ section {
   }
 }
 
+.hero-section-description-em {
+  font-size: 1.5rem;
+
+  @media (--viewport-small) {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 .hero-section-launch {
   font-size: 1.375rem;
+  max-width: 38ch;
 
   @media (--viewport-small) {
     font-size: 0.875rem;

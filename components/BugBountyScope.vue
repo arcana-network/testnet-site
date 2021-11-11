@@ -60,11 +60,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.bug-bounty-scope {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .bug-bounty-scope-in,
 .bug-bounty-scope-out {
   max-width: 36rem !important;

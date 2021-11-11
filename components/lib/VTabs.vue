@@ -3,8 +3,8 @@
     align="start"
     direction="column"
     sm-direction="column"
-    gap="20px"
-    sm-gap="30px"
+    gap="1.875rem"
+    sm-gap="1.25rem"
     class="tabs"
   >
     <v-stack
