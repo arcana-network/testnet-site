@@ -22,7 +22,7 @@
             :weight="700"
             line-height="1.2"
           >
-            Testnet Launch
+            Quantum Descent
           </v-heading>
           <div>
             <v-stack
@@ -46,7 +46,7 @@
                   line-height="1.5"
                   :weight="700"
                 >
-                  Arcana Alpha Testnet: Quantum Descent
+                  Arcana Alpha Testnet Launch
                 </v-text>
               </v-text>
               <v-text
