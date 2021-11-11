@@ -282,14 +282,13 @@ export default {
 
 .feature-capabilities-dos,
 .feature-capabilities-donts {
-  max-width: unset;
+  max-width: unset !important;
   width: 50%;
   min-height: 25rem;
   padding: 2rem !important;
 
   @media (--viewport-small) {
     padding: 1rem !important;
-    max-width: unset;
     min-height: unset;
     width: calc(100% - 2rem);
   }

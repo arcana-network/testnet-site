@@ -62,14 +62,13 @@ export default {
 <style lang="postcss" scoped>
 .bug-bounty-scope-in,
 .bug-bounty-scope-out {
-  max-width: unset;
+  max-width: unset !important;
   width: 50%;
   min-height: 20rem;
   padding: 2rem !important;
 
   @media (--viewport-small) {
     padding: 1rem !important;
-    max-width: unset;
     min-height: unset;
     width: calc(100% - 2rem);
   }
