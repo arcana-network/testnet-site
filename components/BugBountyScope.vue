@@ -64,7 +64,7 @@ export default {
 .bug-bounty-scope-out {
   max-width: unset;
   width: 50%;
-  min-height: 25rem;
+  min-height: 20rem;
   padding: 2rem !important;
 
   @media (--viewport-small) {
