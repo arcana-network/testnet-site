@@ -64,7 +64,13 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/google-analytics',
   ],
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    dev: process.env.NODE_MODULE === 'development',
+  },
 
   axios: {},
 
