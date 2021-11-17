@@ -1,6 +1,10 @@
 <template>
   <div class="quicklinks-cards">
-    <v-card v-for="link in quickLinks" :key="link.name" class="quicklinks-card">
+    <v-card
+      v-for="quickLink in quickLinks"
+      :key="quickLink.name"
+      class="quicklinks-card"
+    >
       <v-stack
         align="start"
         sm-align="center"
@@ -8,7 +12,7 @@
         sm-direction="row"
         justify="space-between"
       >
-        <a :href="link.link" target="_blank">
+        <a :href="quickLink.link" target="_blank">
           <v-stack
             direction="column"
             sm-direction="column"
@@ -17,7 +21,7 @@
             sm-gap="1rem"
           >
             <v-text class="quicklinks-title" :weight="700" line-height="1.5">
-              {{ link.title }}
+              {{ quickLink.title }}
             </v-text>
             <v-text
               class="quicklinks-link-text"
@@ -25,7 +29,7 @@
               line-height="1.4"
               color="secondary"
             >
-              {{ link.linkText }}
+              {{ quickLink.linkText }}
             </v-text>
           </v-stack>
         </a>
