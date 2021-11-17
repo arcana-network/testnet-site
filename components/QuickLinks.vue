@@ -109,7 +109,7 @@ a {
   transition: opacity 0.15s ease-in;
 
   @media (--viewport-small) {
-    padding: 2rem;
+    padding: 2rem !important;
   }
 }
 
