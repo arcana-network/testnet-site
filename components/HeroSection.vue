@@ -54,6 +54,8 @@
         </v-stack>
         <v-stack
           align="start"
+          direction="row"
+          sm-direction="column"
           justify="center"
           gap="1.875rem"
           sm-gap="0.9375rem"
@@ -165,6 +167,10 @@ section {
 }
 
 .cta-button {
-  padding: 15px 60px;
+  padding: 1rem 3.75rem;
+
+  @media (--viewport-small) {
+    width: 100%;
+  }
 }
 </style>
