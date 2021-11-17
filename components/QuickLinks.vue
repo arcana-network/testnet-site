@@ -132,7 +132,11 @@ a {
 }
 
 .quicklinks-arrow {
-  margin-top: 0.2rem;
+  align-self: end;
+
+  @media (--viewport-small) {
+    align-self: center;
+  }
 }
 
 .btn-submit-bugs {
