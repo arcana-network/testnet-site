@@ -40,7 +40,7 @@ export default {
   name: 'BuildSection',
   data() {
     return {
-      tabsList: ['Get Started', 'Use Cases', 'Support'],
+      tabsList: ['Overview', 'Use Cases', 'Support'],
     }
   },
 }

@@ -16,7 +16,7 @@
               line-height="1.2"
               :weight="700"
             >
-              Overview
+              Quantum Descent
             </v-heading>
             <v-text
               class="overview-description"
