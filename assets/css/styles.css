@@ -38,6 +38,10 @@
   background: #404040;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0f0908;
   overflow-x: hidden;
