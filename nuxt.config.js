@@ -56,7 +56,7 @@ export default {
 
   css: ['~/assets/css/normalize.css', '~/assets/css/styles.css'],
 
-  plugins: [],
+  plugins: ['~/plugins/gtag.js'],
 
   components: ['~/components', '~/components/lib'],
 
@@ -64,13 +64,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/google-analytics',
   ],
-
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-    dev: process.env.NODE_MODULE === 'development',
-  },
 
   axios: {},
 
