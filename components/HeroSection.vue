@@ -22,7 +22,7 @@
             line-height="1.2"
             :weight="400"
           >
-            Welcome to the Arcana Alpha Testnet Launch
+            Welcome to the Arcana Alpha Testnet
           </v-heading>
           <v-heading
             class="hero-section-heading-em"
