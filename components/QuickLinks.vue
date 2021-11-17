@@ -1,18 +1,8 @@
 <template>
   <div class="quicklinks-cards">
-    <v-card
-      v-for="quickLink in quickLinks"
-      :key="quickLink.name"
-      class="quicklinks-card"
-    >
-      <v-stack
-        align="start"
-        sm-align="center"
-        direction="row"
-        sm-direction="row"
-        justify="space-between"
-      >
-        <a :href="quickLink.link" target="_blank">
+    <div v-for="quickLink in quickLinks" :key="quickLink.name">
+      <a :href="quickLink.link" target="_blank">
+        <v-card class="quicklinks-card">
           <v-stack
             direction="column"
             sm-direction="column"
@@ -23,19 +13,26 @@
             <v-text class="quicklinks-title" :weight="700" line-height="1.5">
               {{ quickLink.title }}
             </v-text>
-            <v-text
-              class="quicklinks-link-text"
-              :weight="400"
-              line-height="1.4"
-              color="secondary"
+            <v-stack
+              direction="row"
+              align="center"
+              justify="center"
+              gap=".5rem"
             >
-              {{ quickLink.linkText }}
-            </v-text>
+              <v-text
+                class="quicklinks-link-text"
+                :weight="400"
+                line-height="1.4"
+                color="secondary"
+              >
+                {{ quickLink.linkText }}
+              </v-text>
+              <v-image class="quicklinks-arrow" path="images/arrow-right.svg" />
+            </v-stack>
           </v-stack>
-        </a>
-        <v-image class="quicklinks-arrow" path="images/arrow-right.svg" />
-      </v-stack>
-    </v-card>
+        </v-card>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -126,17 +123,13 @@ a {
 
   @media (--viewport-small) {
     font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     max-width: unset;
   }
 }
 
 .quicklinks-arrow {
-  align-self: end;
-
-  @media (--viewport-small) {
-    align-self: center;
-  }
+  width: 0.6em;
 }
 
 .btn-submit-bugs {
