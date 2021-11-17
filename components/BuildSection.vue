@@ -49,14 +49,6 @@ export default {
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
 
-section {
-  margin-top: -5rem !important;
-
-  @media (--viewport-small) {
-    margin-top: 2rem !important;
-  }
-}
-
 .build-heading {
   margin-top: 0;
   margin-bottom: 0;

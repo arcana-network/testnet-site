@@ -4,6 +4,7 @@
     <main>
       <HeroSection />
       <OverviewSection />
+      <GetStartedSection />
       <BuildSection />
       <BugBountySection />
     </main>
