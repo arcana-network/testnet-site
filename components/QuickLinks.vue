@@ -64,7 +64,7 @@ export default {
           name: 'discord',
           title: 'Get Started with our SDK',
           link: 'https://dashboard.arcana.network',
-          linkText: 'Signup',
+          linkText: 'Sign up',
         },
         {
           name: 'discourse',
