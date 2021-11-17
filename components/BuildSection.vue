@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="build-dapps">
     <v-container>
       <v-stack
         align="start"

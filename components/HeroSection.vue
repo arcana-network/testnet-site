@@ -53,28 +53,29 @@
           </div>
         </v-stack>
         <v-stack
-          class="dn"
           align="start"
           justify="center"
           gap="1.875rem"
           sm-gap="0.9375rem"
         >
           <v-button
-            :action="goToForum"
-            type="button"
-            label="Hunt Bugs"
-            label-transform="uppercase"
-            label-size="1rem"
-            :label-weight="600"
-          />
-          <v-button
-            :action="goToDeveloperDashboard"
+            class="cta-button"
+            :action="() => scrollToSection('#build-dapps')"
             type="button"
             label="Build Dapps"
             label-transform="uppercase"
             label-size="1rem"
             :label-weight="600"
             variant="outline"
+          />
+          <v-button
+            class="cta-button"
+            :action="() => scrollToSection('#bug-bounty')"
+            type="button"
+            label="Hunt Bugs"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
           />
         </v-stack>
       </v-stack>
@@ -87,11 +88,12 @@
 export default {
   name: 'HeroSection',
   methods: {
-    goToDeveloperDashboard() {
-      window.open('https://developer.arcana.network', '_blank')
-    },
-    goToForum() {
-      window.open('https://forum.arcana.network', '_blank')
+    scrollToSection(selector) {
+      if (process.client) {
+        document.querySelector(selector).scrollIntoView({
+          behavior: 'smooth',
+        })
+      }
     },
   },
 }
@@ -162,7 +164,7 @@ section {
   background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
 }
 
-.dn {
-  display: none;
+.cta-button {
+  padding: 15px 60px;
 }
 </style>

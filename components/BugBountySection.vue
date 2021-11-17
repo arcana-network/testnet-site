@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="bug-bounty">
     <v-container>
       <v-stack
         align="start"
