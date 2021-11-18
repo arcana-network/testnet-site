@@ -290,7 +290,7 @@ export default {
   @media (--viewport-small) {
     padding: 1rem !important;
     min-height: unset;
-    width: calc(100% - 2rem);
+    width: calc(100% - 2rem) !important;
   }
 }
 
