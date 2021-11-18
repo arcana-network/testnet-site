@@ -1,63 +1,39 @@
 <template>
-  <v-stack
-    direction="column"
-    gap="1.875rem"
-    sm-direction="column"
-    sm-gap="2.5rem"
-  >
-    <div class="quicklinks-cards">
-      <v-card
-        v-for="(link, linkIndex) in quickLinks"
-        :key="link.name"
-        class="quicklinks-card"
-      >
-        <v-stack
-          align="start"
-          sm-align="center"
-          direction="row"
-          sm-direction="row"
-          justify="space-between"
-        >
+  <div class="quicklinks-cards">
+    <div v-for="quickLink in quickLinks" :key="quickLink.name">
+      <a :href="quickLink.link" target="_blank">
+        <v-card class="quicklinks-card">
           <v-stack
             direction="column"
-            sm-direction="row"
+            sm-direction="column"
             align="start"
-            sm-align="center"
             gap="1.25rem"
-            sm-gap="0"
+            sm-gap="1rem"
           >
-            <div class="position-relative">
-              <v-image class="quicklinks-crater" path="images/crater.svg" />
-              <v-text
-                font="serif"
-                :weight="700"
-                line-height="1.2"
-                class="quicklinks-count"
-              >
-                {{ linkIndex + 1 }}
-              </v-text>
-            </div>
-            <v-text
-              class="quicklinks-description"
-              :weight="400"
-              line-height="1.5"
-            >
-              {{ link.description }}
+            <v-text class="quicklinks-title" :weight="700" line-height="1.5">
+              {{ quickLink.title }}
             </v-text>
+            <v-stack
+              direction="row"
+              align="center"
+              justify="center"
+              gap=".5rem"
+            >
+              <v-text
+                class="quicklinks-link-text"
+                :weight="400"
+                line-height="1.4"
+                color="secondary"
+              >
+                {{ quickLink.linkText }}
+              </v-text>
+              <v-image class="quicklinks-arrow" path="images/arrow-right.svg" />
+            </v-stack>
           </v-stack>
-          <v-image class="quicklinks-arrow" path="images/arrow-right.svg" />
-        </v-stack>
-      </v-card>
+        </v-card>
+      </a>
     </div>
-    <v-button
-      class="btn-submit-bugs"
-      label="Submit Bugs"
-      type="button"
-      label-transform="uppercase"
-      label-size="1rem"
-      :label-weight="600"
-    />
-  </v-stack>
+  </div>
 </template>
 
 <script>
@@ -66,10 +42,36 @@ export default {
   data() {
     return {
       quickLinks: [
-        { name: 'docs', description: 'View Docs' },
-        { name: 'demo', description: 'Reference Tutorial App' },
-        { name: 'discord', description: 'Get Started' },
-        { name: 'discourse', description: 'Get Support' },
+        {
+          name: 'docs',
+          title: 'Developer SDK Documentation',
+          link: 'https://docs.arcana.network',
+          linkText: 'View Docs',
+        },
+        {
+          name: 'demo',
+          title: 'Reference Tutorial App',
+          link: 'https://demo.arcana.network',
+          linkText: 'View App',
+        },
+        {
+          name: 'discord',
+          title: 'Get Support on Integration',
+          link: 'https://discord.gg/w6ej4FtqYS',
+          linkText: 'Join Discord',
+        },
+        {
+          name: 'discord',
+          title: 'Get Started with our SDK',
+          link: 'https://dashboard.arcana.network',
+          linkText: 'Sign up',
+        },
+        {
+          name: 'discourse',
+          title: 'Report Bugs and Get Rewarded',
+          link: 'https://forum.arcana.network',
+          linkText: 'Submit Bug',
+        },
       ],
     }
   },
@@ -79,10 +81,15 @@ export default {
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
 
+a {
+  text-decoration: none;
+}
+
 .quicklinks-cards {
   display: grid;
   grid-gap: 1.875rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
 
   @media (--viewport-medium) {
     grid-template-columns: repeat(2, 1fr);
@@ -94,38 +101,35 @@ export default {
   }
 }
 
-.quicklinks-crater {
-  width: 7.5rem;
+.quicklinks-card {
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
 
   @media (--viewport-small) {
-    width: 3.75rem;
+    padding: 2rem !important;
   }
 }
 
-.quicklinks-count {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
+.quicklinks-card:hover,
+.quicklinks-card:focus {
+  opacity: 0.8;
+  transition: opacity 0.15s ease-in;
+}
+
+.quicklinks-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 12ch;
 
   @media (--viewport-small) {
     font-size: 1.25rem;
-  }
-}
-
-.quicklinks-description {
-  font-size: 1.375rem;
-
-  @media (--viewport-small) {
-    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    max-width: unset;
   }
 }
 
 .quicklinks-arrow {
-  @media (--viewport-small) {
-    padding: 1rem;
-  }
+  width: 0.6em;
 }
 
 .btn-submit-bugs {

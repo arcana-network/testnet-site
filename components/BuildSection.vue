@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="build-dapps">
     <v-container>
       <v-stack
         align="start"
@@ -40,7 +40,7 @@ export default {
   name: 'BuildSection',
   data() {
     return {
-      tabsList: ['Get Started', 'Use Cases', 'Support'],
+      tabsList: ['Overview', 'Use Cases', 'Support'],
     }
   },
 }
@@ -50,10 +50,8 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 section {
-  margin-top: -5rem !important;
-
   @media (--viewport-small) {
-    margin-top: 2rem !important;
+    margin-top: 4rem !important;
   }
 }
 

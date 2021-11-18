@@ -20,8 +20,8 @@
       :weight="400"
       line-height="1.4"
     >
-      Use any of the modes below to get in touch with us and get the help you
-      need:
+      Join our #developer or #testnet channel on Discord to receive immediate
+      support, troubleshoot, or share ideas.
     </v-text>
     <v-stack
       style="margin-top: 1.875rem"
@@ -29,43 +29,25 @@
       sm-direction="column"
       align="start"
       sm-align="center"
+      gap="1rem"
     >
-      <a href="mailto:hello@arcana.network">
-        <v-text font="sans" :weight="700" class="build-support-mailing">
-          hello@arcana.network
+      <a href="https://discord.gg/w6ej4FtqYS" target="__blank">
+        <v-image
+          path="images/discord-white.svg"
+          class="build-support-social-link"
+          alt="Arcana discord channel"
+        />
+      </a>
+      <a href="mailto:devrel@arcana.network">
+        <v-text
+          font="sans"
+          :weight="700"
+          class="build-support-mailing"
+          color="secondary"
+        >
+          devrel@arcana.network
         </v-text>
       </a>
-      <v-stack style="margin-top: 2rem" md-justify="space-evenly">
-        <a href="https://twitter.com/arcananetwork" target="__blank">
-          <v-image
-            path="images/twitter-white.svg"
-            class="build-support-social-link"
-            alt="Arcana twitter page"
-          />
-        </a>
-        <a
-          style="margin-left: 3rem"
-          href="https://t.me/ArcanaNetwork"
-          target="__blank"
-        >
-          <v-image
-            path="images/telegram-white.svg"
-            class="build-support-social-link"
-            alt="Arcana telegram channel"
-          />
-        </a>
-        <a
-          style="margin-left: 3rem"
-          href="https://discord.gg/w6ej4FtqYS"
-          target="__blank"
-        >
-          <v-image
-            path="images/discord-white.svg"
-            class="build-support-social-link"
-            alt="Arcana discord channel"
-          />
-        </a>
-      </v-stack>
     </v-stack>
   </v-stack>
 </template>
@@ -96,6 +78,7 @@ export default {
 
 .build-support-description {
   font-size: 1.25rem;
+  max-width: 50ch;
 
   @media (--viewport-small) {
     font-size: 1rem;
@@ -107,21 +90,17 @@ a {
 }
 
 .build-support-mailing {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   line-height: 2.25rem;
 
   @media (--viewport-medium) {
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 .build-support-social-link {
-  width: 2rem;
-}
-
-.dn {
-  display: none;
+  width: 3rem;
 }
 </style>
