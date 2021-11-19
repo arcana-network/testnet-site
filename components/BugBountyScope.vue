@@ -53,8 +53,8 @@ export default {
         { description: 'Bugs in codebase or demo' },
         { description: 'Resistance to DDoS attacks' },
         { description: 'Scalability and performance of the network' },
-        { description: 'Demo app' },
         { description: 'Documentation' },
+        { description: 'Demo app' },
       ],
     }
   },
