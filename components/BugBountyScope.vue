@@ -50,7 +50,7 @@ export default {
       ],
       outOfScopeItems: [
         { description: 'Vulnerabilities in codebase' },
-        { description: 'Bugs in codebase or demo' },
+        { description: 'Bugs in codebase' },
         { description: 'Resistance to DDoS attacks' },
         { description: 'Scalability and performance of the network' },
         { description: 'Documentation' },
