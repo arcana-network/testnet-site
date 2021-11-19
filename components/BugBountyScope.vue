@@ -59,6 +59,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import url('./lib/media-query-helper.css');
+
 .bug-bounty-scope-in,
 .bug-bounty-scope-out {
   max-width: unset !important;
