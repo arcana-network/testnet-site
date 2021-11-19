@@ -51,7 +51,7 @@ export default {
         { description: 'Vulnerabilities and bugs in codebase' },
         { description: 'Resistance to DDoS attacks' },
         { description: 'Scalability and performance of the network' },
-        { description: 'Demo app or documentation' },
+        { description: 'Demo app and documentation' },
       ],
     }
   },
