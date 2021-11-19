@@ -43,16 +43,18 @@ export default {
   data() {
     return {
       inScopeItems: [
-        { description: 'Non-technical and UI bugs' },
+        { description: 'Non-technical and UI bugs in Developer Dashboard' },
         { description: 'Developer Dashboard' },
         { description: 'Developer sign up and login' },
         { description: 'SDK configuration and app creation' },
       ],
       outOfScopeItems: [
         { description: 'Vulnerabilities in codebase' },
-        { description: 'Bugs in codebase' },
+        { description: 'Bugs in codebase or demo' },
         { description: 'Resistance to DDoS attacks' },
         { description: 'Scalability and performance of the network' },
+        { description: 'Demo app' },
+        { description: 'Documentation' },
       ],
     }
   },
@@ -64,7 +66,7 @@ export default {
 .bug-bounty-scope-out {
   max-width: unset !important;
   width: 50%;
-  min-height: 20rem;
+  min-height: 26rem;
   padding: 2rem !important;
 
   @media (--viewport-small) {
