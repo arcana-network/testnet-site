@@ -68,7 +68,6 @@
             label-transform="uppercase"
             label-size="1rem"
             :label-weight="600"
-            variant="outline"
           />
           <v-button
             class="cta-button"
@@ -87,17 +86,11 @@
 </template>
 
 <script>
+import scrollToSectionMixin from '~/mixins/scrollToSection'
+
 export default {
   name: 'HeroSection',
-  methods: {
-    scrollToSection(selector) {
-      if (process.client) {
-        document.querySelector(selector).scrollIntoView({
-          behavior: 'smooth',
-        })
-      }
-    },
-  },
+  mixins: [scrollToSectionMixin],
 }
 </script>
 

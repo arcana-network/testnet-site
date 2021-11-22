@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="get-started">
     <v-container>
       <v-stack align="start" direction="column" gap="3.75rem">
         <div>
@@ -44,6 +44,7 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 section {
+  scroll-margin-top: 2rem;
   margin-top: -5rem !important;
 
   @media (--viewport-small) {
