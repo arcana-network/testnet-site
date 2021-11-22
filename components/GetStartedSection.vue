@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="get-started">
     <v-container>
       <v-stack align="start" direction="column" gap="3.75rem">
         <div>
