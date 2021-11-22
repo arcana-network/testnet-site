@@ -69,12 +69,24 @@
         </div>
       </v-stack>
     </div>
+    <v-button
+      class="cta-button"
+      :action="() => scrollToSection('#get-started')"
+      type="button"
+      label="Get Started"
+      label-transform="uppercase"
+      label-size="1rem"
+      :label-weight="600"
+    />
   </v-stack>
 </template>
 
 <script>
+import scrollToSectionMixin from '~/mixins/scrollToSection'
+
 export default {
   name: 'BuildOverview',
+  mixins: [scrollToSectionMixin],
   data() {
     return {
       featureCards: [
@@ -165,6 +177,15 @@ export default {
   @media (--viewport-medium) {
     font-size: 1rem;
     line-height: 1.125rem;
+  }
+}
+
+.cta-button {
+  width: 15rem;
+  padding: 1rem 3.75rem;
+
+  @media (--viewport-small) {
+    width: 100%;
   }
 }
 </style>

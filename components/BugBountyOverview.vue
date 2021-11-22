@@ -1,49 +1,65 @@
 <template>
-  <v-stack direction="column" gap="1.25rem">
-    <v-text
-      class="bug-bounty-overview-description"
-      color="secondary"
-      :weight="400"
-      line-height="1.4"
-    >
-      We're looking for Bounty Hunters to find bugs in our user interface, and
-      test the functionalities of our SDK.
-    </v-text>
-    <v-text
-      class="bug-bounty-overview-description"
-      color="secondary"
-      :weight="400"
-      line-height="1.4"
-    >
-      If you're a developer with a knack for testing SDKs and APIs - participate
-      in our Bug Bounty Program, from anywhere in the world. Win from a pool of
-      25,000 USDT in rewards.
-    </v-text>
-    <v-text
-      class="bug-bounty-overview-description"
-      color="secondary"
-      :weight="400"
-      line-height="1.4"
-    >
-      The bug bounty will begin on the 17th of November, and last for a 4 week
-      timeframe. Signup on the Developer Dashboard, check out our documentation
-      and get going!
-    </v-text>
-    <v-text
-      class="bug-bounty-overview-description"
-      color="secondary"
-      :weight="400"
-      line-height="1.4"
-    >
-      Before submitting your bug, you'll need to prepare the following:
-    </v-text>
-    <v-list :list-items="stepsList" />
+  <v-stack direction="column" gap="2.45rem">
+    <div>
+      <v-stack direction="column" gap="1.25rem">
+        <v-text
+          class="bug-bounty-overview-description"
+          color="secondary"
+          :weight="400"
+          line-height="1.4"
+        >
+          We're looking for Bounty Hunters to find bugs in our user interface,
+          and test the functionalities of our SDK.
+        </v-text>
+        <v-text
+          class="bug-bounty-overview-description"
+          color="secondary"
+          :weight="400"
+          line-height="1.4"
+        >
+          If you're a developer with a knack for testing SDKs and APIs -
+          participate in our Bug Bounty Program, from anywhere in the world. Win
+          from a pool of 25,000 USDT in rewards.
+        </v-text>
+        <v-text
+          class="bug-bounty-overview-description"
+          color="secondary"
+          :weight="400"
+          line-height="1.4"
+        >
+          The bug bounty will begin on the 17th of November, and last for a 4
+          week timeframe. Signup on the Developer Dashboard, check out our
+          documentation and get going!
+        </v-text>
+        <v-text
+          class="bug-bounty-overview-description"
+          color="secondary"
+          :weight="400"
+          line-height="1.4"
+        >
+          Before submitting your bug, you'll need to prepare the following:
+        </v-text>
+        <v-list :list-items="stepsList" />
+      </v-stack>
+    </div>
+    <v-button
+      class="cta-button"
+      :action="() => scrollToSection('#get-started')"
+      type="button"
+      label="Get Started"
+      label-transform="uppercase"
+      label-size="1rem"
+      :label-weight="600"
+    />
   </v-stack>
 </template>
 
 <script>
+import scrollToSectionMixin from '~/mixins/scrollToSection'
+
 export default {
   name: 'BugBountyOverview',
+  mixins: [scrollToSectionMixin],
   data() {
     return {
       stepsList: [
@@ -159,7 +175,12 @@ export default {
   }
 }
 
-.dn {
-  display: none;
+.cta-button {
+  width: 15rem;
+  padding: 1rem 3.75rem;
+
+  @media (--viewport-small) {
+    width: 100%;
+  }
 }
 </style>
