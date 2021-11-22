@@ -50,6 +50,8 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 section {
+  scroll-margin-top: 2rem;
+
   @media (--viewport-small) {
     margin-top: 4rem !important;
   }
