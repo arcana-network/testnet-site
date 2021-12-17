@@ -6,7 +6,6 @@
       <OverviewSection />
       <GetStartedSection />
       <BuildSection />
-      <BugBountySection />
     </main>
     <TheFooter />
   </div>
