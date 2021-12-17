@@ -61,14 +61,14 @@ export default {
           linkText: 'Join Discord',
         },
         {
-          name: 'discord',
+          name: 'signup',
           title: 'Get Started with our SDK',
           link: 'https://dashboard.arcana.network',
           linkText: 'Sign up',
         },
         {
           name: 'discourse',
-          title: 'Report Bugs and Get Rewarded',
+          title: 'Report Bugs',
           link: 'https://forum.arcana.network',
           linkText: 'Submit Bug',
         },
