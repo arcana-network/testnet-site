@@ -46,8 +46,7 @@
                 line-height="1.5"
                 :weight="700"
               >
-                Developers, your $25k bounty in the unknown awaits from Nov 17th
-                – Dec 17th, 2021.
+                Developers, get access to our SDKs and start building dApps.
               </v-text>
             </v-stack>
           </div>
@@ -65,15 +64,6 @@
             :action="() => scrollToSection('#build-dapps')"
             type="button"
             label="Build Dapps"
-            label-transform="uppercase"
-            label-size="1rem"
-            :label-weight="600"
-          />
-          <v-button
-            class="cta-button"
-            :action="() => scrollToSection('#bug-bounty')"
-            type="button"
-            label="Hunt Bugs"
             label-transform="uppercase"
             label-size="1rem"
             :label-weight="600"
