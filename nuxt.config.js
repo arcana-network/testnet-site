@@ -71,6 +71,7 @@ export default {
   content: {},
 
   build: {
+    extractCSS: true,
     postcss: {
       order: 'presetEnvAndCssnanoLast',
       preset: {
