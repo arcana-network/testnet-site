@@ -7,15 +7,13 @@
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = '''
     default-src 'self';
-    font-src 'self' fonts.gstatic.com;
+
+    font-src 'self' fonts.gstatic.com gstatic.com *.gstatic.com;
     img-src 'self' data:;
-    script-src 'self' googletagmanager.com;
+    script-src 'self' googletagmanager.com *.googletagmanager.com;
     style-src 'self' 'unsafe-inline' fonts.googleapis.com;
 
-    base-uri 'none';
-    connect-src 'none';
-    form-action 'none';
-    object-src 'none';'''
+    connect-src 'self' arcana.network *.arcana.network google-analytics.com *.google-analytics.com list-manage.com *.list-manage.com sentry.io *.sentry.io;'''
 
 [build]
   command = "npm run generate"
