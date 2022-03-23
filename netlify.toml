@@ -1,6 +1,6 @@
 [[headers]]
   for = "/*"
-  [headers.value]
+  [headers.values]
     SameSite = "STRICT"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "DENY"
