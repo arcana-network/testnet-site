@@ -13,7 +13,9 @@
     script-src 'self' googletagmanager.com *.googletagmanager.com;
     style-src 'self' 'unsafe-inline' fonts.googleapis.com;
 
-    connect-src 'self' arcana.network *.arcana.network google-analytics.com *.google-analytics.com list-manage.com *.list-manage.com sentry.io *.sentry.io;'''
+    connect-src 'self' arcana.network *.arcana.network google-analytics.com *.google-analytics.com list-manage.com *.list-manage.com sentry.io *.sentry.io;
+
+    object-src 'none';'''
 
 [build]
   command = "npm run generate"
