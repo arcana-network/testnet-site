@@ -52,13 +52,7 @@
             </v-stack>
           </div>
         </v-stack>
-        <v-stack
-          align="center"
-          direction="row"
-          sm-direction="column"
-          justify="center"
-          gap="1rem"
-        >
+        <v-stack align="center" direction="row" justify="center" gap="1rem">
           <v-button
             class="cta-button"
             :action="() => handleViewDocs()"
