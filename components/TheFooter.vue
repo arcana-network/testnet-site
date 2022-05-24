@@ -5,7 +5,7 @@
         class="footer-container"
         align="start"
         direction="column"
-        gap="20px"
+        gap="3rem"
       >
         <v-heading
           class="footer-heading"
@@ -27,6 +27,9 @@
           cooperate in sharing logs, metrics, and other data related to
           bugs/feature suggestions, in order to help improve the Arcana Network.
         </v-text>
+        <div>
+          <v-button type="link" label="READ MORE"></v-button>
+        </div>
       </v-stack>
     </v-container>
   </footer>
@@ -42,22 +45,21 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 footer {
-  background: url('~assets/images/testnet-footer-bg.png') repeat;
+  background: url('~assets/images/testnet-footer-bg.png') no-repeat;
   background-size: cover;
 
   @media (--viewport-small) {
-    background: url('~assets/images/testnet-footer-bg-mobile.png') repeat;
+    background: url('~assets/images/testnet-footer-bg-mobile.png') no-repeat;
     background-size: 100%;
   }
 }
 
 .footer-container {
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
+  padding-top: 6rem;
+  padding-bottom: 12rem;
 
   @media (--viewport-small) {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+    padding-bottom: 8rem;
   }
 }
 
