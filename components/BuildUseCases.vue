@@ -11,11 +11,15 @@
       :key="useCase.key"
       direction="row"
       sm-direction="column"
-      gap="1.875rem"
-      sm-gap="1.5rem"
-      justify="space-between"
+      gap="10rem"
+      sm-gap="1rem"
     >
-      <v-heading class="build-usecases-heading" :level="3" line-height="1.2">
+      <v-heading
+        class="build-usecases-heading"
+        :weight="600"
+        :level="3"
+        line-height="1.2"
+      >
         {{ useCase.heading }}
       </v-heading>
       <v-text
@@ -76,8 +80,7 @@ export default {
 .build-usecases-heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.1875rem;
-  font-weight: 700;
+  font-size: 1.5rem;
   min-width: 10rem;
   letter-spacing: normal;
 
