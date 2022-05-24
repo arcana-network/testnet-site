@@ -9,7 +9,7 @@
           <template v-for="item in menuItems">
             <a
               v-if="item.external"
-              :key="item.name"
+              :key="`${item.name}-external`"
               :href="item.link"
               target="_blank"
               class="header-menu-item"
@@ -21,7 +21,7 @@
             </a>
             <NuxtLink
               v-else
-              :key="item.name"
+              :key="`${item.name}-internal`"
               :to="item.link"
               class="header-menu-item"
               :class="{
