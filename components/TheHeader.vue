@@ -9,14 +9,24 @@ export default {
     return {
       menuItems: [
         {
-          name: 'Discord',
-          link: 'https://discord.gg/w6ej4FtqYS',
-          external: true,
+          name: 'Overview',
+          link: '#overview',
         },
         {
-          name: 'Blog',
-          link: 'https://medium.com/arcana-network-blog',
-          external: true,
+          name: `What's New`,
+          link: '#whats-new',
+        },
+        {
+          name: 'Features',
+          link: '#features',
+        },
+        {
+          name: 'Get Started',
+          link: '#get-started',
+        },
+        {
+          name: 'Build',
+          link: '#build',
         },
       ],
     }
