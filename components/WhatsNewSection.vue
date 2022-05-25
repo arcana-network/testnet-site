@@ -26,7 +26,12 @@
           testnet.
         </v-text>
       </v-stack>
-      <v-stack justify="space-between" :grow="1" sm-direction="column">
+      <v-stack
+        justify="space-between"
+        :grow="1"
+        sm-direction="column"
+        class="features-list"
+      >
         <v-blurb
           v-for="feature in features"
           :key="`feature-${feature.title}`"
@@ -109,6 +114,10 @@ export default {
   @media (--viewport-small) {
     font-size: 1rem;
   }
+}
+
+.features-list {
+  margin-top: 3rem;
 }
 
 .features-blurb {
