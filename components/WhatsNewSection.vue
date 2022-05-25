@@ -127,7 +127,6 @@ export default {
 .gradient-top {
   position: relative;
   margin-bottom: -7.5%;
-  z-index: 1;
 }
 
 .gradient-bottom {
