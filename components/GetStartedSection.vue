@@ -45,7 +45,6 @@ export default {
 
 section {
   scroll-margin-top: 2rem;
-  margin-top: -5rem !important;
 
   @media (--viewport-small) {
     margin-top: 2rem !important;
