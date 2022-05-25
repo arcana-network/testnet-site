@@ -88,7 +88,7 @@ export default {
 
 section {
   position: relative;
-  min-height: calc((941 - 86) / 1440 * 100vw);
+  min-height: calc((856 - 86) / 1440 * 100vw);
 
   @media (--viewport-small) {
     height: auto;
