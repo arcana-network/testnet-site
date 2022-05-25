@@ -51,7 +51,22 @@
             </v-stack>
           </div>
         </v-stack>
-        <v-stack align="center" direction="row" justify="center" gap="1rem">
+        <v-stack
+          align="center"
+          direction="row"
+          justify="center"
+          gap="1rem"
+          wrap
+        >
+          <v-button
+            class="cta-button"
+            :action="() => handleGoToDashboard()"
+            variant="outline"
+            label="Go to Dashboard"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
+          />
           <v-button
             class="cta-button"
             :action="() => handleViewDocs()"
@@ -61,7 +76,11 @@
             label-size="1rem"
             :label-weight="600"
           />
-          <a href="https://discord.gg/w6ej4FtqYS" title="Join Discord">
+          <a
+            href="https://discord.gg/w6ej4FtqYS"
+            title="Join Discord"
+            class="cta-icon"
+          >
             <img src="@/assets/images/discord.svg" alt="Join Discord" />
           </a>
         </v-stack>
@@ -77,6 +96,9 @@ export default {
   methods: {
     handleViewDocs() {
       window.open('https://docs.arcana.network', '_blank')
+    },
+    handleGoToDashboard() {
+      window.open('https://dashboard.arcana.network', '_blank')
     },
   },
 }
@@ -153,7 +175,13 @@ section {
   border-radius: 10px !important;
 
   @media (--viewport-small) {
-    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (--viewport-small) {
+  .cta-icon {
+    margin-top: 1rem;
   }
 }
 </style>
