@@ -13,10 +13,10 @@
           :weight="700"
           line-height="1.2"
         >
-          Disclaimers
+          Disclaimer
         </v-heading>
         <v-text class="footer-text" line-height="1.4" :weight="400">
-          Participating in Arcana's Testnet: Quantum Descent does not constitute
+          Participating in Arcana's Testnet: Quantum Ascent does not constitute
           any guarantees of performance, reliability, or availability. Any loss
           arising from the use of our SDK will be the developer's sole
           responsibility.
