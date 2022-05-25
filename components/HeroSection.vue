@@ -29,8 +29,7 @@
             :weight="700"
             line-height="1.2"
           >
-            Arcana Beta Testnet<br />
-            Quantum Ascent
+            Arcana Beta Testnet Quantum Ascent
           </v-heading>
           <div>
             <v-stack
@@ -122,6 +121,7 @@ section {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 4rem;
+  max-width: 44rem;
 
   @media (--viewport-small) {
     font-size: 2.1875rem;
