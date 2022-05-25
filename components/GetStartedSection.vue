@@ -31,6 +31,16 @@
         <quick-links />
       </v-stack>
     </v-container>
+    <div class="get-started-illustration">
+      <img
+        src="@/assets/images/get-started-illustration.png"
+        class="mobile-remove"
+      />
+      <img
+        src="@/assets/images/get-started-illustration-mobile.png"
+        class="tablet-remove laptop-remove mobile-show"
+      />
+    </div>
   </section>
 </template>
 
@@ -69,5 +79,14 @@ section {
   @media (--viewport-small) {
     font-size: 1rem;
   }
+}
+
+.get-started-illustration {
+  position: relative;
+  margin-top: 8rem;
+}
+
+.get-started-illustration img {
+  width: 100%;
 }
 </style>
