@@ -32,6 +32,7 @@
         </div>
       </v-stack>
     </v-container>
+    <div class="section-gradient" />
   </footer>
 </template>
 
@@ -45,6 +46,7 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 footer {
+  position: relative;
   background: url('~assets/images/testnet-footer-bg.png') no-repeat;
   background-size: cover;
 
@@ -79,5 +81,14 @@ footer {
   @media (--viewport-small) {
     font-size: 1rem;
   }
+}
+
+.section-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
 }
 </style>
