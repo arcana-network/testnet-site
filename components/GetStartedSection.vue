@@ -91,19 +91,17 @@ section {
 
 .get-started-illustration {
   position: relative;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .gradient-top {
   position: relative;
   margin-bottom: -25%;
-  z-index: 1;
 }
 
 .gradient-bottom {
   position: relative;
   margin-top: -25%;
-  z-index: 1;
 }
 
 .get-started-illustration img {
