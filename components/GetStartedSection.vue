@@ -33,12 +33,20 @@
     </v-container>
     <div class="get-started-illustration">
       <img
+        src="@/assets/images/testnet-top-gradient.png"
+        class="gradient-top"
+      />
+      <img
         src="@/assets/images/get-started-illustration.png"
         class="mobile-remove"
       />
       <img
         src="@/assets/images/get-started-illustration-mobile.png"
         class="tablet-remove laptop-remove mobile-show"
+      />
+      <img
+        src="@/assets/images/testnet-bottom-gradient.png"
+        class="gradient-bottom"
       />
     </div>
   </section>
@@ -83,7 +91,19 @@ section {
 
 .get-started-illustration {
   position: relative;
-  margin-top: 8rem;
+  margin-top: 4rem;
+}
+
+.gradient-top {
+  position: relative;
+  margin-bottom: -25%;
+  z-index: 1;
+}
+
+.gradient-bottom {
+  position: relative;
+  margin-top: -25%;
+  z-index: 1;
 }
 
 .get-started-illustration img {
