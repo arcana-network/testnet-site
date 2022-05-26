@@ -209,6 +209,26 @@ export default {
   margin-top: 1.25rem;
 }
 
+.icon-container {
+  position: relative;
+  overflow: visible;
+}
+
+.icon-container::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  right: -40%;
+  bottom: -40%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(11, 132, 201, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
 .icon-container > * {
   @media (--viewport-medium) {
     width: 12rem;
