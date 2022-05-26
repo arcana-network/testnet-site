@@ -203,6 +203,10 @@ export default {
 
 .overview-feature-title {
   margin: 0;
+
+  @media (--viewport-small) {
+    font-size: 1.5rem;
+  }
 }
 
 .overview-feature-description {
@@ -231,11 +235,7 @@ export default {
 
 .icon-container > * {
   @media (--viewport-medium) {
-    width: 12rem;
-  }
-
-  @media (--viewport-small) {
-    width: 8rem;
+    width: 10rem;
   }
 }
 </style>
