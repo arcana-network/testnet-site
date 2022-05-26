@@ -74,19 +74,19 @@ export default {
           icon: 'images/passwordless.svg',
           title: 'Passwordless Auth',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'No longer do users have to remember passwords to login to a dApp. Send users a one time link to their emails which they can then use to authenticate themselves.',
         },
         {
           icon: 'images/wallet.svg',
           title: 'Wallet',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Store keys securely with the Arcana Wallet in order to safely sign transactions for any actions performed on the Arcana platform.',
         },
         {
           icon: 'images/private-nft.svg',
           title: 'Private NFTs',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Users can now mint private NFTs powered by the Arcana platform and thus control who can actually access the underlying asset.',
         },
       ],
     }
@@ -117,15 +117,20 @@ export default {
 }
 
 .features-list {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .features-blurb {
-  max-width: 15rem;
+  max-width: 24rem;
 
   @media (--viewport-small) {
     max-width: 100%;
+    padding: 1rem 0 2rem;
   }
+}
+
+.features-list > * + * {
+  border-top: 1px solid #353535;
 }
 
 .features-illustration {
