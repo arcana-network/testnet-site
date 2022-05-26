@@ -87,7 +87,7 @@
                   :level="3"
                   line-height="1.2"
                 >
-                  Dont&rsquo;s
+                  Don&rsquo;ts
                 </v-heading>
                 <v-list
                   :list-items="featureCapabilitiesDontItems"
@@ -116,6 +116,7 @@ export default {
             '<strong>Social Auth:</strong> Login using social accounts',
             '<strong>Passwordless Auth:</strong> Login using a link sent to your email',
             'Auth also supported by Arcana web wallet',
+            '<strong>3rd Party wallet auth:</strong> Support for authentication through third party wallets (MetaMask, WalletConnect)',
           ],
         },
         {
@@ -126,7 +127,6 @@ export default {
             'Download & Decrypt files',
             'Associate metadata with each file',
             'Pick your geographic region to store data',
-            '<strong>3rd Party wallet auth:</strong> Support for authentication through third party wallets (MetaMask, WalletConnect)',
           ],
         },
         {
