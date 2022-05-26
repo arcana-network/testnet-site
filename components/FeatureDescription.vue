@@ -73,7 +73,7 @@ export default {
   list-style-type: square;
 }
 
-.feature-description-list-container .feature-description-list {
+.feature-description-list {
   color: var(--color-grey);
 }
 </style>
