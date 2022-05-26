@@ -68,7 +68,7 @@ export default {
         {
           name: 'report-bugs',
           title: 'Report Bugs',
-          link: '#',
+          link: 'https://forum.arcana.network',
           linkText: 'Submit Bug',
         },
       ],
