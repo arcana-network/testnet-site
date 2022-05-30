@@ -39,11 +39,9 @@
             <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
           </div>
           <div class="overview-feature">
-            <div>
-              <v-heading :level="2" class="overview-feature-title">
-                Arcana Auth
-              </v-heading>
-            </div>
+            <v-heading :level="2" class="overview-feature-title">
+              Arcana Auth
+            </v-heading>
             <div class="overview-feature-description">
               <v-text color="secondary" line-height="1.5" size="1.125rem">
                 Everyone of these great investors are well known and well
@@ -193,7 +191,7 @@ export default {
 }
 
 .overview-feature {
-  max-width: 32rem;
+  max-width: 36rem;
   text-align: left;
 }
 
@@ -236,6 +234,11 @@ export default {
 .icon-container > * {
   @media (--viewport-medium) {
     width: 10rem;
+    margin-top: 1rem;
+  }
+
+  @media (--viewport-small) {
+    width: 6rem;
   }
 }
 </style>
