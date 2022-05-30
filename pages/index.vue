@@ -3,7 +3,7 @@
     <TheHeader />
     <main>
       <HeroSection />
-      <OverviewSection />
+      <TestnetFeaturesSection />
       <GetStartedSection />
       <BuildSection />
     </main>
