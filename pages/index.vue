@@ -5,6 +5,7 @@
       <HeroSection />
       <OverviewSection />
       <WhatsNewSection />
+      <TestnetFeaturesSection />
       <GetStartedSection />
       <BuildSection />
     </main>

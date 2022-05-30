@@ -38,14 +38,14 @@
           alt="Arcana discord channel"
         />
       </a>
-      <a href="mailto:devrel@arcana.network">
+      <a href="mailto:support@arcana.network">
         <v-text
           font="sans"
           :weight="700"
           class="build-support-mailing"
           color="secondary"
         >
-          devrel@arcana.network
+          support@arcana.network
         </v-text>
       </a>
     </v-stack>

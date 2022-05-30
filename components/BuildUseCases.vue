@@ -1,21 +1,19 @@
 <template>
-  <v-stack
-    class="build-usecases"
-    direction="column"
-    sm-direction="column"
-    gap="3.125rem"
-    sm-gap="3.75rem"
-  >
+  <v-stack class="build-usecases" direction="column" sm-direction="column">
     <v-stack
       v-for="useCase in useCasesList"
       :key="useCase.key"
       direction="row"
       sm-direction="column"
-      gap="1.875rem"
-      sm-gap="1.5rem"
-      justify="space-between"
+      gap="10rem"
+      sm-gap="1rem"
     >
-      <v-heading class="build-usecases-heading" :level="3" line-height="1.2">
+      <v-heading
+        class="build-usecases-heading"
+        :weight="600"
+        :level="3"
+        line-height="1.2"
+      >
         {{ useCase.heading }}
       </v-heading>
       <v-text
@@ -73,11 +71,18 @@ export default {
   margin-top: 1.875rem;
 }
 
+.build-usecases > * + * {
+  margin-top: 3rem;
+
+  @media (--viewport-small) {
+    margin-top: 2rem;
+  }
+}
+
 .build-usecases-heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.1875rem;
-  font-weight: 700;
+  font-size: 1.5rem;
   min-width: 10rem;
   letter-spacing: normal;
 

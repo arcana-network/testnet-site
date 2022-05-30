@@ -1,118 +1,111 @@
 <template>
   <section>
     <v-container>
-      <v-stack align="start" direction="column" gap="3.75rem">
-        <div>
-          <v-stack
-            align="start"
-            direction="column"
-            sm-direction="column"
-            gap="1.875rem"
-            sm-gap="1.25rem"
-          >
-            <v-heading
-              class="overview-heading"
-              :level="2"
-              line-height="1.2"
-              :weight="700"
-            >
-              Quantum Descent
-            </v-heading>
-            <v-text
-              class="overview-description"
-              color="secondary"
-              :weight="400"
-              line-height="1.4"
-            >
-              The future of privacy is now! Quantum Descent has begun.
-              <br />
-              Get access to our SDK, explore use cases, and improve the Arcana
-              Network.
-            </v-text>
-          </v-stack>
-        </div>
-        <div>
-          <v-tabs :tabs-list="tabsList">
-            <template #tab-0>
-              <v-stack
-                direction="column"
-                sm-direction="column"
-                gap="2.5rem"
-                sm-gap="1.875rem"
-              >
-                <v-text
-                  class="feature-overview-description"
-                  color="secondary"
-                  :weight="400"
-                  line-height="1.4"
-                >
-                  A feature-packed SDK for secure storage, access, and
-                  authentication.
-                </v-text>
-                <div class="feature-overviews">
-                  <div
-                    v-for="featureOverviewPoint in featureOverviewPoints"
-                    :key="featureOverviewPoint.title"
-                    class="feature-overview-points"
-                  >
-                    <v-blurb
-                      :image="featureOverviewPoint.icon"
-                      :alt="featureOverviewPoint.title"
-                      :title="featureOverviewPoint.title"
-                      :description="featureOverviewPoint.description"
-                    />
-                  </div>
-                </div>
-              </v-stack>
-            </template>
-            <template #tab-1>
-              <v-stack
-                align="start"
-                sm-align="start"
-                direction="row"
-                sm-direction="column"
-                justify="start"
-                sm-justify="baseline"
-                gap="3rem"
-                sm-gap="1.875rem"
-                class="feature-capabilities"
-              >
-                <v-chip class="feature-capabilities-dos">
-                  <v-stack direction="column" gap="2.25rem">
-                    <v-heading
-                      class="feature-capabilities-heading"
-                      :level="3"
-                      line-height="1.2"
-                    >
-                      Do&rsquo;s
-                    </v-heading>
-                    <v-list
-                      :list-items="featureCapabilitiesDoItems"
-                      variant="positive"
-                    />
-                  </v-stack>
-                </v-chip>
-                <v-chip class="feature-capabilities-donts">
-                  <v-stack direction="column" gap="2.25rem">
-                    <v-heading
-                      class="feature-capabilities-heading"
-                      :level="3"
-                      line-height="1.2"
-                    >
-                      Dont&rsquo;s
-                    </v-heading>
-                    <v-list
-                      :list-items="featureCapabilitiesDontItems"
-                      variant="negative"
-                    />
-                  </v-stack>
-                </v-chip>
-              </v-stack>
-            </template>
-          </v-tabs>
-        </div>
-        <div class="feature-overview-illustration full-bleed" />
+      <v-stack
+        align="start"
+        direction="column"
+        sm-direction="column"
+        gap="1.875rem"
+        sm-gap="1.25rem"
+      >
+        <v-heading
+          class="overview-heading"
+          :level="2"
+          line-height="1.2"
+          :weight="700"
+        >
+          Overview
+        </v-heading>
+        <v-text
+          class="overview-description"
+          color="secondary"
+          :weight="400"
+          line-height="1.4"
+        >
+          Welcome to our Testnet Ascent.
+          <br />
+          Traverse our alpha, get access to the SDK, explore new Use Cases - and
+          improve the Arcana Network.
+        </v-text>
       </v-stack>
+      <div class="overview-features">
+        <v-stack
+          justify="space-between"
+          align="center"
+          sm-align="start"
+          gap="2rem"
+        >
+          <div class="icon-container">
+            <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
+          </div>
+          <div class="overview-feature">
+            <v-heading :level="2" class="overview-feature-title">
+              Arcana Auth
+            </v-heading>
+            <div class="overview-feature-description">
+              <v-text color="secondary" line-height="1.5" size="1.125rem">
+                Everyone of these great investors are well known and well
+                respected in their own right. Through us, they're helping shape
+                the world like the way they envision it should be.
+              </v-text>
+            </div>
+          </div>
+        </v-stack>
+        <v-stack
+          justify="space-between"
+          align="center"
+          sm-align="start"
+          gap="2rem"
+        >
+          <div class="overview-feature">
+            <div>
+              <v-heading :level="2" class="overview-feature-title">
+                Auth Storage
+              </v-heading>
+            </div>
+            <div class="overview-feature-description">
+              <v-text color="secondary" line-height="1.5" size="1.125rem">
+                Everyone of these great investors are well known and well
+                respected in their own right. Through us, they're helping shape
+                the world like the way they envision it should be.
+              </v-text>
+            </div>
+          </div>
+          <div class="icon-container">
+            <v-image
+              path="images/arcana-overview-storage.svg"
+              alt="Arcana Storage"
+            />
+          </div>
+        </v-stack>
+        <v-stack
+          justify="space-between"
+          align="center"
+          sm-align="start"
+          gap="2rem"
+        >
+          <div class="icon-container">
+            <v-image
+              path="images/arcana-overview-access.svg"
+              alt="Arcana Access"
+            />
+          </div>
+          <div class="overview-feature">
+            <div>
+              <v-heading :level="2" class="overview-feature-title">
+                Arcana Access
+              </v-heading>
+            </div>
+            <div class="overview-feature-description">
+              <v-text color="secondary" line-height="1.5" size="1.125rem">
+                Everyone of these great investors are well known and well
+                respected in their own right. Through us, they're helping shape
+                the world like the way they envision it should be.
+              </v-text>
+            </div>
+          </div>
+        </v-stack>
+      </div>
     </v-container>
   </section>
 </template>
@@ -197,113 +190,55 @@ export default {
   }
 }
 
-.overview-features-heading {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2.5rem;
-  letter-spacing: normal;
+.overview-feature {
+  max-width: 36rem;
+  text-align: left;
+}
+
+.overview-features > * {
+  margin-top: 6rem;
+}
+
+.overview-feature-title {
+  margin: 0;
 
   @media (--viewport-small) {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 }
 
-.feature-overview-description {
-  font-size: 1.25rem;
-  max-width: 50ch;
-
-  @media (--viewport-small) {
-    font-size: 1rem;
-  }
+.overview-feature-description {
+  margin-top: 1.25rem;
 }
 
-.feature-overviews {
-  display: grid;
-  grid-gap: 3rem;
-  grid-template-columns: repeat(5, 1fr);
-
-  @media (--viewport-medium) {
-    grid-gap: 2.5rem;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (--viewport-small) {
-    grid-gap: 1.25rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.icon-container {
+  position: relative;
+  overflow: visible;
 }
 
-.feature-overview-points {
-  justify-content: center;
-  align-items: center;
-}
-
-.feature-overview-points > * {
-  margin: 0 auto;
-  max-width: 24ch;
-}
-
-.feature-overview-points > .blurb-description {
-  font-size: 1.125rem !important;
-  line-height: 1.375rem;
-
-  @media (--viewport-medium) {
-    font-size: 1rem;
-    line-height: 1.125rem;
-  }
-}
-
-.full-bleed {
-  margin-left: -10vw;
-  max-width: none;
-  width: 100vw;
-
-  @media (--viewport-small) {
-    margin-left: -5%;
-  }
-}
-
-.feature-overview-illustration {
-  margin-top: -10rem;
+.icon-container::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  right: -40%;
+  bottom: -40%;
   z-index: -1;
-  background-image: url('~assets/images/testnet-overview-top-gradient.png'),
-    url('~assets/images/testnet-overview-bottom-gradient.png'),
-    url('~assets/images/testnet-overview.png');
-  background-size: contain, contain, cover;
-  background-position: top, bottom, top;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: clamp(420px, calc((1155 / 1440) * 80vw), 900px);
-
-  @media (--viewport-small) {
-    margin-top: -5rem;
-  }
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(11, 132, 201, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-.feature-capabilities-dos,
-.feature-capabilities-donts {
-  max-width: unset !important;
-  width: 50%;
-  min-height: 25rem;
-  padding: 2rem !important;
-
-  @media (--viewport-small) {
-    padding: 1rem !important;
-    min-height: unset;
-    width: calc(100% - 2rem) !important;
+.icon-container > * {
+  @media (--viewport-medium) {
+    width: 10rem;
+    margin-top: 1rem;
   }
-}
-
-.feature-capabilities-heading {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2.1875rem;
-  font-weight: 700;
-  letter-spacing: normal;
 
   @media (--viewport-small) {
-    font-size: 1.25rem;
-    font-weight: 600;
+    width: 6rem;
   }
 }
 </style>
