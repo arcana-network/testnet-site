@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="whats-new">
     <v-container>
       <v-stack
         align="start"
@@ -130,7 +130,9 @@ export default {
 }
 
 .features-list > * + * {
-  border-top: 1px solid #353535;
+  @media (--viewport-small) {
+    border-top: 1px solid #353535;
+  }
 }
 
 .features-illustration {

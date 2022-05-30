@@ -63,10 +63,6 @@ export default {
 
 section {
   scroll-margin-top: 2rem;
-
-  @media (--viewport-small) {
-    margin-top: 2rem !important;
-  }
 }
 
 .get-started-heading {
