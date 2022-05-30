@@ -5,7 +5,7 @@
         class="footer-container"
         align="start"
         direction="column"
-        gap="20px"
+        gap="3rem"
       >
         <v-heading
           class="footer-heading"
@@ -13,10 +13,10 @@
           :weight="700"
           line-height="1.2"
         >
-          Disclaimers
+          Disclaimer
         </v-heading>
         <v-text class="footer-text" line-height="1.4" :weight="400">
-          Participating in Arcana's Testnet: Quantum Descent does not constitute
+          Participating in Arcana's Testnet: Quantum Ascent does not constitute
           any guarantees of performance, reliability, or availability. Any loss
           arising from the use of our SDK will be the developer's sole
           responsibility.
@@ -27,8 +27,12 @@
           cooperate in sharing logs, metrics, and other data related to
           bugs/feature suggestions, in order to help improve the Arcana Network.
         </v-text>
+        <div>
+          <v-button type="link" label="READ MORE"></v-button>
+        </div>
       </v-stack>
     </v-container>
+    <div class="section-gradient" />
   </footer>
 </template>
 
@@ -42,22 +46,22 @@ export default {
 @import url('./lib/media-query-helper.css');
 
 footer {
-  background: url('~assets/images/testnet-footer-bg.png') repeat;
+  position: relative;
+  background: url('~assets/images/testnet-footer-bg.png') no-repeat;
   background-size: cover;
 
   @media (--viewport-small) {
-    background: url('~assets/images/testnet-footer-bg-mobile.png') repeat;
+    background: url('~assets/images/testnet-footer-bg-mobile.png') no-repeat;
     background-size: 100%;
   }
 }
 
 .footer-container {
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
+  padding-top: 6rem;
+  padding-bottom: 12rem;
 
   @media (--viewport-small) {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -77,5 +81,14 @@ footer {
   @media (--viewport-small) {
     font-size: 1rem;
   }
+}
+
+.section-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
 }
 </style>
