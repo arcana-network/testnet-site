@@ -18,11 +18,10 @@
         >
           <v-heading
             class="hero-section-heading"
-            color="secondary"
             line-height="1.2"
-            :weight="400"
+            :weight="500"
           >
-            Welcome to the Arcana Alpha Testnet
+            Welcome to the
           </v-heading>
           <v-heading
             class="hero-section-heading-em"
@@ -30,7 +29,7 @@
             :weight="700"
             line-height="1.2"
           >
-            Quantum Descent
+            Arcana Beta Testnet Quantum Ascent
           </v-heading>
           <div>
             <v-stack
@@ -43,44 +42,65 @@
             >
               <v-text
                 class="hero-section-launch"
-                line-height="1.5"
-                :weight="700"
+                line-height="1.2"
+                :weight="400"
+                color="secondary"
               >
-                Developers, get access to our SDKs and start building dApps.
+                It's time to put privacy front and center. Let's build.
               </v-text>
             </v-stack>
           </div>
         </v-stack>
         <v-stack
-          align="start"
+          align="center"
           direction="row"
-          sm-direction="column"
           justify="center"
-          gap="1.875rem"
-          sm-gap="0.9375rem"
+          gap="1rem"
+          wrap
         >
           <v-button
             class="cta-button"
-            :action="() => scrollToSection('#build-dapps')"
-            type="button"
-            label="Build Dapps"
+            :action="() => handleGoToDashboard()"
+            variant="outline"
+            label="Go to Dashboard"
             label-transform="uppercase"
             label-size="1rem"
             :label-weight="600"
           />
+          <v-button
+            class="cta-button"
+            :action="() => handleViewDocs()"
+            type="button"
+            label="View Docs"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
+          />
+          <a
+            href="https://discord.gg/w6ej4FtqYS"
+            title="Join Discord"
+            class="cta-icon"
+          >
+            <img src="@/assets/images/discord.svg" alt="Join Discord" />
+          </a>
         </v-stack>
       </v-stack>
     </v-container>
-    <div class="section-gradient mobile-remove" />
+    <div class="section-gradient tablet-remove mobile-remove" />
   </section>
 </template>
 
 <script>
-import scrollToSectionMixin from '~/mixins/scrollToSection'
-
 export default {
   name: 'HeroSection',
-  mixins: [scrollToSectionMixin],
+  methods: {
+    handleViewDocs() {
+      window.open('https://docs.arcana.network', '_blank')
+    },
+    handleGoToDashboard() {
+      window.open('https://dashboard.arcana.network', '_blank')
+    },
+  },
 }
 </script>
 
@@ -89,7 +109,7 @@ export default {
 
 section {
   position: relative;
-  min-height: calc((941 - 86) / 1440 * 100vw);
+  min-height: calc((856 - 86) / 1440 * 100vw);
 
   @media (--viewport-small) {
     height: auto;
@@ -98,7 +118,7 @@ section {
 }
 
 .hero-section-container {
-  margin-top: 20vh;
+  margin-top: 14vh;
   float: right;
 
   @media (--viewport-small) {
@@ -123,6 +143,7 @@ section {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 4rem;
+  max-width: 44rem;
 
   @media (--viewport-small) {
     font-size: 2.1875rem;
@@ -151,9 +172,16 @@ section {
 
 .cta-button {
   padding: 1rem 3.75rem;
+  border-radius: 10px !important;
 
   @media (--viewport-small) {
-    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (--viewport-small) {
+  .cta-icon {
+    margin-top: 1rem;
   }
 }
 </style>
