@@ -44,7 +44,6 @@
                 class="hero-section-launch"
                 line-height="1.2"
                 :weight="400"
-                color="secondary"
               >
                 It's time to put privacy front and center. Let's build.
               </v-text>
