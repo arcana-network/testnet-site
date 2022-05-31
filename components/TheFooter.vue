@@ -52,7 +52,7 @@ footer {
 
   @media (--viewport-small) {
     background: url('~assets/images/testnet-footer-bg-mobile.png') no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
 }
 
