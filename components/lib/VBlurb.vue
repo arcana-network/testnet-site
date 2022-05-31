@@ -1,5 +1,5 @@
 <template>
-  <v-stack align="center" gap="1.25rem">
+  <v-stack align="start" gap="1.25rem">
     <v-image
       v-if="image"
       :path="image"
