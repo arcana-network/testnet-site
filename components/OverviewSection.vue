@@ -62,7 +62,7 @@
           <div class="overview-feature">
             <div>
               <v-heading :level="2" class="overview-feature-title">
-                Auth Storage
+                Auth Store
               </v-heading>
             </div>
             <div class="overview-feature-description">
