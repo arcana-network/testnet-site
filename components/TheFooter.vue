@@ -27,9 +27,6 @@
           cooperate in sharing logs, metrics, and other data related to
           bugs/feature suggestions, in order to help improve the Arcana Network.
         </v-text>
-        <div>
-          <v-button type="link" label="READ MORE"></v-button>
-        </div>
       </v-stack>
     </v-container>
     <div class="section-gradient" />
