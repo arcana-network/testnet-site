@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="features">
     <v-container>
       <v-stack
         align="start"

@@ -1,5 +1,5 @@
 <template>
-  <section id="build-dapps">
+  <section id="build">
     <v-container>
       <v-stack
         align="start"
@@ -47,11 +47,6 @@ export default {
 
 section {
   scroll-margin-top: 2rem;
-  margin-bottom: 8rem;
-
-  @media (--viewport-small) {
-    margin-top: 4rem !important;
-  }
 }
 
 .build-heading {

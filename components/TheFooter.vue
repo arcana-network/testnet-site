@@ -27,9 +27,6 @@
           cooperate in sharing logs, metrics, and other data related to
           bugs/feature suggestions, in order to help improve the Arcana Network.
         </v-text>
-        <div>
-          <v-button type="link" label="READ MORE"></v-button>
-        </div>
       </v-stack>
     </v-container>
     <div class="section-gradient" />
@@ -52,16 +49,17 @@ footer {
 
   @media (--viewport-small) {
     background: url('~assets/images/testnet-footer-bg-mobile.png') no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
 }
 
 .footer-container {
   padding-top: 6rem;
-  padding-bottom: 12rem;
+  padding-bottom: 6rem;
 
   @media (--viewport-small) {
-    padding-bottom: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -88,7 +86,11 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 5rem;
   background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
+
+  @media (--viewport-small) {
+    height: 3rem;
+  }
 }
 </style>

@@ -117,7 +117,6 @@ a {
 
   @media (--viewport-small) {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
     max-width: unset;
   }
 }

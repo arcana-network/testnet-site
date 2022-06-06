@@ -18,7 +18,7 @@
               color="secondary"
               line-height="1.5"
               :weight="400"
-              size="1.125rem"
+              class="feature-description"
               v-html="description"
             />
           </li>
@@ -59,7 +59,7 @@ export default {
   width: 8rem;
 
   @media (--viewport-small) {
-    width: 6rem;
+    width: 5rem;
   }
 }
 
@@ -75,5 +75,13 @@ export default {
 
 .feature-description-list {
   color: var(--color-grey);
+}
+
+.feature-description {
+  font-size: 1.125rem;
+
+  @media (--viewport-small) {
+    font-size: 1rem;
+  }
 }
 </style>
