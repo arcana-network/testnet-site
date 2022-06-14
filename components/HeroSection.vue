@@ -53,8 +53,10 @@
         <v-stack
           align="center"
           direction="row"
+          sm-direction="column"
           justify="center"
           gap="1rem"
+          sm-gap="1rem"
           wrap
         >
           <v-button
@@ -170,7 +172,8 @@ section {
 }
 
 .cta-button {
-  padding: 1rem 3.75rem;
+  padding: 1.25rem 1.5rem;
+  width: 14rem;
   border-radius: 10px !important;
 
   @media (--viewport-small) {
