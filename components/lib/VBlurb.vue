@@ -15,7 +15,7 @@
       <v-image v-if="image" :path="image" :alt="alt" class="mobile-remove" />
       <slot v-else name="art"></slot>
       <div>
-        <v-stack direction="column" gap="0.625rem">
+        <v-stack direction="column" gap="0.75rem">
           <v-heading v-if="title" :level="4" :weight="600" class="blurb-title">
             {{ title }}
           </v-heading>
@@ -36,6 +36,17 @@
             class="blurb-description"
           >
             {{ description }}
+          </v-text>
+          <v-text
+            v-if="subDescription"
+            font="serif"
+            color="secondary"
+            :weight="300"
+            size="1rem"
+            line-height="1.4"
+            class="blurb-sub-description"
+          >
+            {{ subDescription }}
           </v-text>
         </v-stack>
       </div>
@@ -60,6 +71,10 @@ export default {
       default: null,
     },
     description: {
+      type: String,
+      default: null,
+    },
+    subDescription: {
       type: String,
       default: null,
     },
