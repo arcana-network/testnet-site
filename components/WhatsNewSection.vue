@@ -16,15 +16,6 @@
         >
           What's New
         </v-heading>
-        <v-text
-          class="features-description"
-          color="secondary"
-          :weight="400"
-          line-height="1.4"
-        >
-          Check out release notes here for all the new updates since previous
-          testnet.
-        </v-text>
       </v-stack>
       <v-stack
         justify="space-between"
@@ -39,9 +30,22 @@
           :alt="feature.title"
           :title="feature.title"
           :description="feature.description"
+          :sub-description="feature.subDescription"
           class="features-blurb"
         />
       </v-stack>
+      <div class="release-notes-container">
+        <v-text
+          class="features-description"
+          color="secondary"
+          :weight="400"
+          line-height="1.4"
+        >
+          For a complete list of what's new in our beta release, check our
+          product
+          <a href="https://docs.arcana.network/docs/rn_beta">release notes</a>.
+        </v-text>
+      </div>
     </v-container>
     <div class="features-illustration">
       <img
@@ -73,20 +77,25 @@ export default {
         {
           icon: 'images/passwordless.svg',
           title: 'Passwordless Auth',
-          description:
-            'No longer do users have to remember passwords to login to a dApp. Send users a one time link to their emails which they can then use to authenticate themselves.',
+          description: 'Your dApp users no longer need to remember passwords!',
+          subDescription:
+            'The passwordless auth feature enables dApp to send users a magic link at a specified email ID of their choice. Upon clicking the link, user is automatically authenticated and logged in your dApp.',
         },
         {
           icon: 'images/wallet.svg',
           title: 'Wallet',
           description:
-            'Store keys securely with the Arcana Wallet in order to safely sign transactions for any actions performed on the Arcana platform.',
+            'Your dApp users no longer need to manage blockchain keys for signing transactions!',
+          subDescription:
+            'Arcana Wallet securely manages distributed private key for every authenticated user and never exposes it. It provides standard Ethereum provider interface to safely sign transactions for storage operations.',
         },
         {
           icon: 'images/private-nft.svg',
           title: 'Private NFTs',
           description:
-            'Users can now mint private NFTs powered by the Arcana platform and thus control who can actually access the underlying asset.',
+            'Your dApp users no longer need to worry about unauthorized data copies!',
+          subDescription:
+            'Enable users to mint private NFTs powered by Arcana Storage and Wallet. Users control who can actually view or access an NFT asset. They can list and sell NFT easily and securely by transferring NFT ownership.',
         },
       ],
     }
@@ -152,5 +161,9 @@ export default {
 
 .features-illustration img {
   width: 100%;
+}
+
+.release-notes-container {
+  margin-top: 3rem;
 }
 </style>
