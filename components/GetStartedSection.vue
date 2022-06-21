@@ -86,7 +86,14 @@ section {
 
 .get-started-illustration {
   position: relative;
-  margin-top: 2rem;
+  margin-top: -8rem;
+  margin-bottom: -8rem;
+  z-index: -1;
+
+  @media (--viewport-large) {
+    margin-top: -18rem;
+    margin-bottom: -18rem;
+  }
 }
 
 .gradient-top {
