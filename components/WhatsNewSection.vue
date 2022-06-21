@@ -61,7 +61,7 @@
         class="tablet-remove laptop-remove mobile-show"
       />
       <img
-        src="@/assets/images/features-gradient-bottom.png"
+        src="@/assets/images/features-gradient-bottom.svg"
         class="gradient-bottom"
       />
     </div>
@@ -147,6 +147,12 @@ export default {
 .features-illustration {
   position: relative;
   margin-top: 2rem;
+
+  @media (--viewport-large) {
+    margin-top: -6rem;
+    margin-bottom: -14rem;
+    z-index: -1;
+  }
 }
 
 .gradient-top {
@@ -165,5 +171,6 @@ export default {
 
 .release-notes-container {
   margin-top: 3rem;
+  max-width: 36rem;
 }
 </style>
