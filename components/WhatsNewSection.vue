@@ -109,8 +109,8 @@ export default {
   margin-top: 2rem;
 
   @media (--viewport-large) {
-    margin-top: -6rem;
-    margin-bottom: -14rem;
+    margin-top: 4rem;
+    margin-bottom: -12rem;
     z-index: -1;
   }
 }
