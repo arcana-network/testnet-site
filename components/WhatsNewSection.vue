@@ -39,7 +39,7 @@ export default {
           title: 'Passwordless Auth',
           caption: 'Your dApp users no longer need to remember passwords!',
           description:
-            'The passwordless auth feature enables dApp to send users a magic link at a specified email ID of their choice. Upon clicking the link, user is automatically authenticated and logged in your dApp.',
+            'The passwordless auth feature enables dApp to send users a login link at a specified email ID of their choice. Upon clicking the link, user is automatically authenticated and logged in your dApp.',
         },
         {
           icon: 'images/wallet.svg',
