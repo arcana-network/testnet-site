@@ -1,17 +1,7 @@
 <template>
   <v-stack align="start" gap="1.25rem">
-    <v-image
-      v-if="image"
-      :path="image"
-      :alt="alt"
-      class="laptop-remove tablet-remove mobile-show"
-    />
-    <v-stack
-      direction="column"
-      align="center"
-      gap="1.25rem"
-      class="blurb-container"
-    >
+    <v-image v-if="image" :path="image" :alt="alt" class="laptop-remove tablet-remove mobile-show" />
+    <v-stack direction="column" align="center" gap="1.25rem" class="blurb-container">
       <v-image v-if="image" :path="image" :alt="alt" class="mobile-remove" />
       <slot v-else name="art"></slot>
       <div>
@@ -20,33 +10,15 @@
             {{ title }}
           </v-heading>
           <div v-if="lineBreaks">
-            <div
-              v-for="lineBreak in lineBreaks"
-              :key="lineBreak"
-              style="margin-top: 1.4rem"
-            />
+            <div v-for="lineBreak in lineBreaks" :key="lineBreak" style="margin-top: 1.4rem" />
           </div>
-          <v-text
-            v-if="description"
-            font="serif"
-            color="secondary"
-            :weight="400"
-            size="1rem"
-            line-height="1.4"
-            class="blurb-description"
-          >
-            {{ description }}
+          <v-text v-if="caption" font="serif" color="secondary" :weight="400" size="1rem" line-height="1.4"
+            class="blurb-caption">
+            {{ caption }}
           </v-text>
-          <v-text
-            v-if="subDescription"
-            font="serif"
-            color="secondary"
-            :weight="300"
-            size="1rem"
-            line-height="1.4"
-            class="blurb-sub-description"
-          >
-            {{ subDescription }}
+          <v-text v-if="description" font="serif" color="secondary" :weight="300" size="1rem" line-height="1.4"
+            class="blurb-description">
+            {{ description }}
           </v-text>
         </v-stack>
       </div>
@@ -70,11 +42,11 @@ export default {
       type: String,
       default: null,
     },
-    description: {
+    caption: {
       type: String,
       default: null,
     },
-    subDescription: {
+    description: {
       type: String,
       default: null,
     },

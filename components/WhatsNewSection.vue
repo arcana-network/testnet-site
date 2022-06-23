@@ -1,46 +1,18 @@
 <template>
   <section id="whats-new">
     <v-container>
-      <v-stack
-        align="start"
-        direction="column"
-        sm-direction="column"
-        gap="1.875rem"
-        sm-gap="1.25rem"
-      >
-        <v-heading
-          class="features-heading"
-          :level="2"
-          line-height="1.2"
-          :weight="700"
-        >
+      <v-stack align="start" direction="column" sm-direction="column" gap="1.875rem" sm-gap="1.25rem">
+        <v-heading class="features-heading" :level="2" line-height="1.2" :weight="700">
           What's New
         </v-heading>
       </v-stack>
-      <v-stack
-        justify="space-between"
-        :grow="1"
-        sm-direction="column"
-        class="features-list"
-      >
-        <v-blurb
-          v-for="feature in features"
-          :key="`feature-${feature.title}`"
-          :image="feature.icon"
-          :alt="feature.title"
-          :title="feature.title"
-          :description="feature.description"
-          :sub-description="feature.subDescription"
-          class="features-blurb"
-        />
+      <v-stack justify="space-between" :grow="1" sm-direction="column" class="features-list">
+        <v-blurb v-for="feature in features" :key="`feature-${feature.title}`" :image="feature.icon"
+          :alt="feature.title" :title="feature.title" :description="feature.description" :caption="feature.caption"
+          class="features-blurb" />
       </v-stack>
       <div class="release-notes-container">
-        <v-text
-          class="features-description"
-          color="secondary"
-          :weight="400"
-          line-height="1.4"
-        >
+        <v-text class="features-description" color="secondary" :weight="400" line-height="1.4">
           For a complete list of what's new in our beta release, check our
           product
           <a href="https://docs.arcana.network/docs/rn_beta">release notes</a>.
@@ -48,22 +20,10 @@
       </div>
     </v-container>
     <div class="features-illustration">
-      <img
-        src="@/assets/images/features-gradient-top.png"
-        class="gradient-top"
-      />
-      <img
-        src="@/assets/images/features-illustration.png"
-        class="mobile-remove"
-      />
-      <img
-        src="@/assets/images/features-illustration-mobile.png"
-        class="tablet-remove laptop-remove mobile-show"
-      />
-      <img
-        src="@/assets/images/features-gradient-bottom.svg"
-        class="gradient-bottom"
-      />
+      <img src="@/assets/images/features-gradient-top.png" class="gradient-top" />
+      <img src="@/assets/images/features-illustration.png" class="mobile-remove" />
+      <img src="@/assets/images/features-illustration-mobile.png" class="tablet-remove laptop-remove mobile-show" />
+      <img src="@/assets/images/features-gradient-bottom.svg" class="gradient-bottom" />
     </div>
   </section>
 </template>
@@ -77,24 +37,24 @@ export default {
         {
           icon: 'images/passwordless.svg',
           title: 'Passwordless Auth',
-          description: 'Your dApp users no longer need to remember passwords!',
-          subDescription:
+          caption: 'Your dApp users no longer need to remember passwords!',
+          description:
             'The passwordless auth feature enables dApp to send users a magic link at a specified email ID of their choice. Upon clicking the link, user is automatically authenticated and logged in your dApp.',
         },
         {
           icon: 'images/wallet.svg',
           title: 'Wallet',
-          description:
+          caption:
             'Your dApp users no longer need to manage blockchain keys for signing transactions!',
-          subDescription:
+          description:
             'Arcana Wallet securely manages distributed private key for every authenticated user and never exposes it. It provides standard Ethereum provider interface to safely sign transactions for storage operations.',
         },
         {
           icon: 'images/private-nft.svg',
           title: 'Private NFTs',
-          description:
+          caption:
             'Your dApp users no longer need to worry about unauthorized data copies!',
-          subDescription:
+          description:
             'Enable users to mint private NFTs powered by Arcana Storage and Wallet. Users control who can actually view or access an NFT asset. They can list and sell NFT easily and securely by transferring NFT ownership.',
         },
       ],
@@ -138,7 +98,7 @@ export default {
   }
 }
 
-.features-list > * + * {
+.features-list>*+* {
   @media (--viewport-small) {
     border-top: 1px solid #353535;
   }
