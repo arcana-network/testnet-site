@@ -1,30 +1,14 @@
 <template>
   <section id="features">
     <v-container>
-      <v-stack
-        align="start"
-        direction="column"
-        sm-direction="column"
-        gap="1.875rem"
-        sm-gap="1.25rem"
+      <v-heading
+        class="features-heading"
+        :level="2"
+        line-height="1.2"
+        :weight="700"
       >
-        <v-heading
-          class="features-heading"
-          :level="2"
-          line-height="1.2"
-          :weight="700"
-        >
-          Features & Capabilities
-        </v-heading>
-        <v-text
-          class="features-description"
-          color="secondary"
-          :weight="400"
-          line-height="1.4"
-        >
-          This testnet will solely focus on the SDK and its core functionality.
-        </v-text>
-      </v-stack>
+        Features & Capabilities
+      </v-heading>
       <v-tabs :tabs-list="tabsList" class="features-tabs">
         <template #tab-0>
           <v-stack

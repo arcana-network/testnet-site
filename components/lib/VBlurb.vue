@@ -1,40 +1,23 @@
 <template>
   <v-stack align="start" gap="1.25rem">
-    <v-image
-      v-if="image"
-      :path="image"
-      :alt="alt"
-      class="laptop-remove tablet-remove mobile-show"
-    />
-    <v-stack
-      direction="column"
-      align="center"
-      gap="1.25rem"
-      class="blurb-container"
-    >
+    <v-image v-if="image" :path="image" :alt="alt" class="laptop-remove tablet-remove mobile-show" />
+    <v-stack direction="column" align="center" gap="1.25rem" class="blurb-container">
       <v-image v-if="image" :path="image" :alt="alt" class="mobile-remove" />
       <slot v-else name="art"></slot>
       <div>
-        <v-stack direction="column" gap="0.625rem">
+        <v-stack direction="column" gap="0.75rem">
           <v-heading v-if="title" :level="4" :weight="600" class="blurb-title">
             {{ title }}
           </v-heading>
           <div v-if="lineBreaks">
-            <div
-              v-for="lineBreak in lineBreaks"
-              :key="lineBreak"
-              style="margin-top: 1.4rem"
-            />
+            <div v-for="lineBreak in lineBreaks" :key="lineBreak" style="margin-top: 1.4rem" />
           </div>
-          <v-text
-            v-if="description"
-            font="serif"
-            color="secondary"
-            :weight="400"
-            size="1rem"
-            line-height="1.4"
-            class="blurb-description"
-          >
+          <v-text v-if="caption" font="serif" color="secondary" :weight="400" size="1rem" line-height="1.4"
+            class="blurb-caption">
+            {{ caption }}
+          </v-text>
+          <v-text v-if="description" font="serif" color="secondary" :weight="300" size="1rem" line-height="1.4"
+            class="blurb-description">
             {{ description }}
           </v-text>
         </v-stack>
@@ -56,6 +39,10 @@ export default {
       default: null,
     },
     title: {
+      type: String,
+      default: null,
+    },
+    caption: {
       type: String,
       default: null,
     },

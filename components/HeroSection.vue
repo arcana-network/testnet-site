@@ -1,85 +1,36 @@
 <template>
   <section>
     <v-container>
-      <v-stack
-        class="hero-section-container"
-        align="start"
-        sm-align="center"
-        direction="column"
-        gap="30px"
-      >
-        <v-stack
-          align="start"
-          sm-align="center"
-          direction="column"
-          sm-direction="column"
-          gap="2.5rem"
-          sm-gap="1.25rem"
-        >
-          <v-heading
-            class="hero-section-heading"
-            line-height="1.2"
-            :weight="500"
-          >
-            Welcome to the
-          </v-heading>
-          <v-heading
-            class="hero-section-heading-em"
-            :level="1"
-            :weight="700"
-            line-height="1.2"
-          >
-            Arcana Beta Testnet Quantum Ascent
-          </v-heading>
+      <v-stack class="hero-section-container" align="start" sm-align="center" direction="column" gap="30px">
+        <v-stack align="start" sm-align="center" direction="column" sm-direction="column" gap="2.5rem" sm-gap="1.25rem">
           <div>
-            <v-stack
-              align="start"
-              sm-align="center"
-              direction="column"
-              sm-direction="column"
-              gap="1.25rem"
-              sm-gap="1.25rem"
-            >
-              <v-text
-                class="hero-section-launch"
-                line-height="1.2"
-                :weight="400"
-              >
-                It's time to put privacy front and center. Let's build.
+            <v-heading class="hero-section-heading-em" :level="1" :weight="600" line-height="1.2" color="secondary">
+              Arcana Beta Testnet
+            </v-heading>
+            <v-heading class="hero-section-heading-em" :level="1" :weight="700" line-height="1.2">
+              Quantum Ascent
+            </v-heading>
+          </div>
+          <div>
+            <v-heading class="hero-section-heading" line-height="1.2" :weight="600">
+              Welcome!
+            </v-heading>
+            <v-stack direction="column">
+              <v-text class="hero-section-launch" line-height="1.5" :weight="400">
+                It's time to put privacy front and center.
+              </v-text>
+              <v-text class="hero-section-launch" line-height="1.5" :weight="600">
+                Let's build.
               </v-text>
             </v-stack>
           </div>
         </v-stack>
-        <v-stack
-          align="center"
-          direction="row"
-          justify="center"
-          gap="1rem"
-          wrap
-        >
-          <v-button
-            class="cta-button"
-            :action="() => handleGoToDashboard()"
-            variant="outline"
-            label="Go to Dashboard"
-            label-transform="uppercase"
-            label-size="1rem"
-            :label-weight="600"
-          />
-          <v-button
-            class="cta-button"
-            :action="() => handleViewDocs()"
-            type="button"
-            label="View Docs"
-            label-transform="uppercase"
-            label-size="1rem"
-            :label-weight="600"
-          />
-          <a
-            href="https://discord.gg/w6ej4FtqYS"
-            title="Join Discord"
-            class="cta-icon"
-          >
+        <v-stack align="center" direction="row" sm-direction="column" justify="center" gap="2rem" sm-gap="1rem" wrap>
+          <v-button class="cta-button" :action="() => handleViewDocs()" type="button" label="View Docs"
+            label-transform="uppercase" label-size="1rem" :label-weight="600" />
+          <v-button class="cta-button" :action="() => handleGoToDashboard()" variant="outline" label="Go to Dashboard"
+            label-transform="uppercase" label-size="1rem" :label-weight="600" />
+          <a href="https://discord.gg/w6ej4FtqYS" title="Join Discord" class="cta-icon">
             <img src="@/assets/images/discord.svg" alt="Join Discord" />
           </a>
         </v-stack>
@@ -117,11 +68,11 @@ section {
 }
 
 .hero-section-container {
-  margin-top: 14vh;
+  margin-top: 6vh;
   float: right;
 
   @media (--viewport-small) {
-    margin-top: calc(((451 - 86) / 375) * 100vw + 10vh);
+    margin-top: calc(((451 - 86) / 375) * 100vw + 12vh);
     margin-bottom: 10vh;
     float: none;
   }
@@ -129,8 +80,8 @@ section {
 
 .hero-section-heading {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.75rem;
+  margin-bottom: 0.625rem;
+  font-size: 2rem;
 
   @media (--viewport-small) {
     font-size: 1.5rem;
@@ -147,6 +98,14 @@ section {
   @media (--viewport-small) {
     font-size: 2.1875rem;
     text-align: center;
+  }
+}
+
+.hero-section-heading-em:nth-child(2) {
+  font-size: 4.5rem;
+
+  @media (--viewport-small) {
+    font-size: 2.5rem;
   }
 }
 
@@ -170,12 +129,22 @@ section {
 }
 
 .cta-button {
-  padding: 1rem 3.75rem;
+  padding: 1.25rem 1.5rem;
+  width: 14rem;
   border-radius: 10px !important;
 
   @media (--viewport-small) {
     margin-top: 1rem;
   }
+}
+
+.cta-icon {
+  vertical-align: middle;
+}
+
+.cta-icon>img {
+  height: 3.75rem;
+  vertical-align: middle;
 }
 
 @media (--viewport-small) {

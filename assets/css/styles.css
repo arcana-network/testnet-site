@@ -85,3 +85,29 @@ body {
 .position-fixed {
   position: fixed;
 }
+
+ul.list-container {
+  padding: 0;
+  padding-left: 0.625rem;
+  list-style-type: square;
+}
+
+li.list {
+  color: var(--color-grey);
+}
+
+li > .list-description {
+  color: var(--color-grey) !important;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+
+  @media (--viewport-small) {
+    font-size: 0.875rem !important;
+  }
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}

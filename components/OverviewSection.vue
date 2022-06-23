@@ -16,24 +16,37 @@
         >
           Overview
         </v-heading>
-        <v-text
-          class="overview-description"
-          color="secondary"
-          :weight="400"
-          line-height="1.4"
-        >
-          Welcome to our Testnet Ascent.
-          <br />
-          Traverse our alpha, get access to the SDK, explore new Use Cases - and
-          improve the Arcana Network.
-        </v-text>
+        <div>
+          <v-text
+            class="overview-description"
+            color="secondary"
+            :weight="400"
+            line-height="1.4"
+          >
+            Be a part of our testnet ascent.
+            <br />
+            Get your copy of the SDKs and explore the beta release.
+          </v-text>
+          <ul class="list-container">
+            <li
+              v-for="description in overviewDescriptionList"
+              :key="description"
+              class="list"
+            >
+              <v-text class="list-description">
+                {{ description }}
+              </v-text>
+            </li>
+          </ul>
+        </div>
       </v-stack>
       <div class="overview-features">
         <v-stack
-          justify="space-between"
           align="center"
           sm-align="start"
-          gap="2rem"
+          gap="12rem"
+          sm-gap="2rem"
+          justify="center"
         >
           <div class="icon-container">
             <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
@@ -43,21 +56,49 @@
               Arcana Auth
             </v-heading>
             <div class="overview-feature-description">
-              <v-text color="secondary" line-height="1.5" size="1.125rem">
-                Provide frictionless onboarding for web3 users using social auth
-                or passwordless logins. Arcana handles all aspects of key
-                management from key pair generation to secure non-custodial
-                handling through the arcana wallet so that your users don't have
-                to.
-              </v-text>
+              <div>
+                <v-text color="secondary" line-height="1.5" size="1.125rem">
+                  Easily plugin familiar, frictionless web3 user onboarding in
+                  your dApp.
+                </v-text>
+                <ul class="list-container">
+                  <li
+                    v-for="description in authFeatures"
+                    :key="description"
+                    class="list"
+                  >
+                    <v-text class="list-description">
+                      {{ description }}
+                    </v-text>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-top: 2rem">
+                <v-text color="secondary" line-height="1.5" size="1.125rem">
+                  Delegate intricacies of key management to secure Arcana
+                  Wallet.
+                </v-text>
+                <ul class="list-container">
+                  <li
+                    v-for="description in authServices"
+                    :key="description"
+                    class="list"
+                  >
+                    <v-text class="list-description">
+                      {{ description }}
+                    </v-text>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </v-stack>
         <v-stack
-          justify="space-between"
           align="center"
           sm-align="start"
-          gap="2rem"
+          gap="12rem"
+          sm-gap="2rem"
+          justify="center"
         >
           <div class="overview-feature">
             <div>
@@ -67,12 +108,20 @@
             </div>
             <div class="overview-feature-description">
               <v-text color="secondary" line-height="1.5" size="1.125rem">
-                Store user data securely on Arcana's decentralised storage
-                network. Every asset uploaded to the arcana network is split up
-                and stored across our nodes so that there is no single point of
-                failure & your assets are protected against geo-specific
-                disasters and hacks.
+                Store dApp user data securely in Arcana's distributed Store for
+                data sovereignty and privacy.
               </v-text>
+              <ul class="list-container">
+                <li
+                  v-for="description in storeServices"
+                  :key="description"
+                  class="list"
+                >
+                  <v-text class="list-description">
+                    {{ description }}
+                  </v-text>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="icon-container">
@@ -83,10 +132,11 @@
           </div>
         </v-stack>
         <v-stack
-          justify="space-between"
           align="center"
           sm-align="start"
-          gap="2rem"
+          gap="12rem"
+          sm-gap="2rem"
+          justify="center"
         >
           <div class="icon-container">
             <v-image
@@ -102,10 +152,19 @@
             </div>
             <div class="overview-feature-description">
               <v-text color="secondary" line-height="1.5" size="1.125rem">
-                Let your code or users decide who gets access to data. Arcana
-                Access uses DIDs for identification of data and to store,
-                on-chain, who is the owner of the data and who has access to it.
+                Let dApp users control who can access their data.
               </v-text>
+              <ul class="list-container">
+                <li
+                  v-for="description in accessServices"
+                  :key="description"
+                  class="list"
+                >
+                  <v-text class="list-description">
+                    {{ description }}
+                  </v-text>
+                </li>
+              </ul>
             </div>
           </div>
         </v-stack>
@@ -152,20 +211,26 @@ export default {
             'Download data from DID links, verify permission, and decrypt data',
         },
       ],
-      featureCapabilitiesDoItems: [
-        { description: 'Create test accounts.' },
-        { description: 'Develop new use cases.' },
-        { description: 'Test access control and data integrity.' },
-        { description: 'Report bugs and share feedback.' },
+      overviewDescriptionList: [
+        'Build your dApps faster.',
+        'Easily onboard users via social, passwordless authentication.',
+        'Enable dApp user data sovereignty and privacy.',
       ],
-      featureCapabilitiesDontItems: [
-        { description: 'Performance and stress testing.' },
-        { description: 'Testing high-availability or reliability of nodes.' },
-        {
-          description:
-            'Long term storage of data. The network might reset and also go through breaking changes or upgrades.',
-        },
-        { description: 'Transfer of token assets.' },
+      authFeatures: ['Social authentication', 'Passwordless login'],
+      authServices: [
+        'Distributed key generation',
+        'Non-custodial key management',
+        'Standard Ethereum Provider Access',
+      ],
+      storeServices: [
+        'No single point of failure - each user data asset is split up and stored on multiple nodes.',
+        'Highly available - protected from geo-specific outages, disasters and hacks.',
+        'dApp developers control data storage region, storage usage and bandwidth limits per user.',
+      ],
+      accessServices: [
+        'Each user data file is uniquely associated with a DID.',
+        'File ownership and metadata access are managed on blockchain.',
+        'Only file owners can share, revoke, change file ownership or delete a file.',
       ],
     }
   },
@@ -195,7 +260,7 @@ export default {
 }
 
 .overview-feature {
-  max-width: 36rem;
+  max-width: 32rem;
   text-align: left;
 }
 
