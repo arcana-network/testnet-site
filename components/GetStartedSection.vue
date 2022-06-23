@@ -3,27 +3,11 @@
     <v-container>
       <v-stack align="start" direction="column" gap="3.75rem">
         <div>
-          <v-stack
-            align="start"
-            direction="column"
-            sm-direction="column"
-            gap="1.875rem"
-            sm-gap="1.25rem"
-          >
-            <v-heading
-              class="get-started-heading"
-              :level="2"
-              line-height="1.2"
-              :weight="700"
-            >
+          <v-stack align="start" direction="column" sm-direction="column" gap="1.875rem" sm-gap="1.25rem">
+            <v-heading class="get-started-heading" :level="2" line-height="1.2" :weight="700">
               Get Started
             </v-heading>
-            <v-text
-              class="get-started-description"
-              color="secondary"
-              :weight="400"
-              line-height="1.4"
-            >
+            <v-text class="get-started-description" color="secondary" :weight="400" line-height="1.4">
               Resources to help you build apps with Arcana or find bugs.
             </v-text>
           </v-stack>
@@ -32,22 +16,10 @@
       </v-stack>
     </v-container>
     <div class="get-started-illustration">
-      <img
-        src="@/assets/images/testnet-top-gradient.png"
-        class="gradient-top"
-      />
-      <img
-        src="@/assets/images/get-started-illustration.png"
-        class="mobile-remove"
-      />
-      <img
-        src="@/assets/images/get-started-illustration-mobile.png"
-        class="tablet-remove laptop-remove mobile-show"
-      />
-      <img
-        src="@/assets/images/testnet-bottom-gradient.png"
-        class="gradient-bottom"
-      />
+      <img src="@/assets/images/testnet-top-gradient.png" class="gradient-top" />
+      <img src="@/assets/images/get-started-illustration.png" class="mobile-remove" />
+      <img src="@/assets/images/get-started-illustration-mobile.png" class="tablet-remove laptop-remove mobile-show" />
+      <img src="@/assets/images/testnet-bottom-gradient.png" class="gradient-bottom" />
     </div>
   </section>
 </template>
@@ -86,7 +58,6 @@ section {
 
 .get-started-illustration {
   position: relative;
-  margin-top: -8rem;
   margin-bottom: -8rem;
   z-index: -1;
 
