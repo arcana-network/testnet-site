@@ -47,7 +47,7 @@ export default {
           caption:
             'Your dApp users no longer need to manage blockchain keys for signing transactions!',
           description:
-            'Arcana Wallet securely manages distributed private key for every authenticated user and never exposes it. It provides standard Ethereum provider interface to safely sign transactions for storage operations.',
+            'Arcana Auth securely manages distributed private key for every authenticated user and never exposes it. It provides standard Ethereum provider interface to safely sign transactions for storage operations.',
         },
         {
           icon: 'images/private-nft.svg',
@@ -55,7 +55,7 @@ export default {
           caption:
             'Your dApp users no longer need to worry about unauthorized data copies!',
           description:
-            'Enable users to mint private NFTs powered by Arcana Storage and Wallet. Users control who can actually view or access an NFT asset. They can list and sell NFT easily and securely by transferring NFT ownership.',
+            'Enable users to mint private NFTs powered by Arcana Storage and Auth. Users control who can actually view or access an NFT asset. They can list and sell NFT easily and securely by transferring NFT ownership.',
         },
       ],
     }
