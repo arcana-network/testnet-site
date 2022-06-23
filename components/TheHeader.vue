@@ -1,5 +1,6 @@
 <template>
-  <v-header logo="images/arcana-logo-vertical.svg" :menu-items="menuItems" />
+  <v-header logo="images/arcana-logo-vertical.svg" :menu-items="menuItems" class="sticky-header"
+    :class="{ 'sticky-header-background': !isScrollAtTop }" />
 </template>
 
 <script>
@@ -29,7 +30,37 @@ export default {
           link: '#build',
         },
       ],
+      isScrollAtTop: true
+    }
+  },
+  mounted() {
+    const headerInstance = this;
+    headerInstance.checkIsScrollAtTop()
+
+    window.onscroll = function (ev) {
+      headerInstance.checkIsScrollAtTop()
+    }
+  },
+  methods: {
+    checkIsScrollAtTop() {
+      if (window.scrollY < 50) {
+        this.isScrollAtTop = true;
+      } else {
+        this.isScrollAtTop = false;
+      }
     }
   },
 }
 </script>
+
+<style scoped>
+.sticky-header {
+  position: sticky;
+  top: 0;
+  transition: background-color 0.3s;
+}
+
+.sticky-header-background {
+  background-color: var(--color-black);
+}
+</style>
