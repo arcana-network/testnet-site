@@ -15,7 +15,7 @@
         <v-text class="features-description" color="secondary" :weight="400" line-height="1.4">
           For a complete list of what's new in our beta release, check our
           product
-          <a href="https://docs.arcana.network/docs/rn_beta">release notes</a>.
+          <a href="https://docs.beta.arcana.network/docs/rn_beta">release notes</a>.
         </v-text>
       </div>
     </v-container>
@@ -39,7 +39,7 @@ export default {
           title: 'Passwordless Auth',
           caption: 'Your dApp users no longer need to remember passwords!',
           description:
-            'The passwordless auth feature enables dApp to send users a magic link at a specified email ID of their choice. Upon clicking the link, user is automatically authenticated and logged in your dApp.',
+            'The passwordless auth feature enables dApp to send users a login link at a specified email ID of their choice. Upon clicking the link, user is automatically authenticated and logged in your dApp.',
         },
         {
           icon: 'images/wallet.svg',
@@ -47,7 +47,7 @@ export default {
           caption:
             'Your dApp users no longer need to manage blockchain keys for signing transactions!',
           description:
-            'Arcana Wallet securely manages distributed private key for every authenticated user and never exposes it. It provides standard Ethereum provider interface to safely sign transactions for storage operations.',
+            'Arcana Auth securely manages distributed private key for every authenticated user and never exposes it. It provides standard Ethereum provider interface to safely sign transactions for storage operations.',
         },
         {
           icon: 'images/private-nft.svg',
@@ -55,7 +55,7 @@ export default {
           caption:
             'Your dApp users no longer need to worry about unauthorized data copies!',
           description:
-            'Enable users to mint private NFTs powered by Arcana Storage and Wallet. Users control who can actually view or access an NFT asset. They can list and sell NFT easily and securely by transferring NFT ownership.',
+            'Enable users to mint private NFTs powered by Arcana Storage and Auth. Users control who can actually view or access an NFT asset. They can list and sell NFT easily and securely by transferring NFT ownership.',
         },
       ],
     }
@@ -109,8 +109,8 @@ export default {
   margin-top: 2rem;
 
   @media (--viewport-large) {
-    margin-top: -6rem;
-    margin-bottom: -14rem;
+    margin-top: 4rem;
+    margin-bottom: -12rem;
     z-index: -1;
   }
 }

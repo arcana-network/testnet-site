@@ -45,10 +45,10 @@ export default {
   name: 'HeroSection',
   methods: {
     handleViewDocs() {
-      window.open('https://docs.arcana.network', '_blank')
+      window.open('https://docs.beta.arcana.network', '_blank')
     },
     handleGoToDashboard() {
-      window.open('https://dashboard.arcana.network', '_blank')
+      window.open('https://dashboard.beta.arcana.network', '_blank')
     },
   },
 }
