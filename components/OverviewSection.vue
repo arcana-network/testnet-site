@@ -6,7 +6,7 @@
           Overview
         </v-heading>
         <div>
-          <v-text class="overview-description" color="secondary" :weight="400" line-height="1.4">
+          <v-text class="overview-description" color="secondary" :weight="400" line-height="1.5">
             Be a part of our testnet ascent.
             <br />
             Get your copy of the SDKs and explore the beta release.
