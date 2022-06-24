@@ -43,11 +43,7 @@ export default {
   },
   methods: {
     checkIsScrollAtTop() {
-      if (window.scrollY < 50) {
-        this.isScrollAtTop = true;
-      } else {
-        this.isScrollAtTop = false;
-      }
+      this.isScrollAtTop = window.scrollY < 50
     }
   },
 }
