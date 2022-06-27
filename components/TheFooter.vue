@@ -27,6 +27,20 @@
           cooperate in sharing logs, metrics, and other data related to
           bugs/feature suggestions, in order to help improve the Arcana Network.
         </v-text>
+        <v-text class="footer-text" line-height="1.4" :weight="400">
+          By participating, you agree to Arcana Network's
+          <a
+            href="https://github.com/arcana-network/license/blob/main/PRIVACY.md"
+            target="_blank"
+            >Privacy Policy</a
+          >
+          &
+          <a
+            href="https://github.com/arcana-network/license/blob/main/TERMS.md"
+            target="_blank"
+            >Terms of Use</a
+          >.
+        </v-text>
       </v-stack>
     </v-container>
     <div class="section-gradient" />
