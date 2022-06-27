@@ -34,7 +34,7 @@ export default {
           name: 'demo',
           title: 'Sample dApp',
           description:
-            'Refer to <a href="https://docs.beta.arcana.network/docs/demo-app/" target="_blank">code samples</a> and <a href="https://github.com/arcana-network/demo-app" target="_blank">tutorials on GitHub</a> on how to integrate and use Arcana SDKs. Check out <a href="https://demo.beta.arcana.network" target="_blank">deployed sample dApp</a>.',
+            'Refer to <a href="https://docs.beta.arcana.network/docs/overview_cs/" target="_blank">code samples</a> and <a href="https://github.com/arcana-network/sdk-demo" target="_blank">tutorials on GitHub</a> on how to integrate and use Arcana SDKs. Check out <a href="https://demo.beta.arcana.network" target="_blank">deployed sample dApp</a>.',
         },
         {
           name: 'dashboard',
@@ -52,7 +52,7 @@ export default {
           name: 'report-bugs',
           title: 'Report Bugs',
           description:
-            'Participate in our bug-bounty program. Click here to <a href="https://forum.beta.arcana.network" target="_blank">report bugs</a>.',
+            'Participate in our bug-bounty program. Click here to <a href="https://forum.arcana.network" target="_blank">report bugs</a>.',
         },
       ],
     }
