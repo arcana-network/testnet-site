@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"]
-    }
+    },
+    "jsx": "preserve"
   },
   "exclude": [".nuxt-storybook", ".nuxt", "dist", "node_modules"]
 }

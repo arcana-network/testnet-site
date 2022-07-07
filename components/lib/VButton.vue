@@ -117,7 +117,7 @@ button:disabled {
 
 /* Primary Button Styles */
 button[data-variant='primary'] {
-  background: linear-gradient(0deg, #0085ff 0%, #29c8fa 100%);
+  background: linear-gradient(180deg, #0085ff -4.5%, #29c8fa 100.1%);
   color: var(--color-white);
 }
 button[data-variant='primary']:disabled {
@@ -126,8 +126,9 @@ button[data-variant='primary']:disabled {
 
 /* Outline Button Styles */
 button[data-variant='outline'] {
-  color: var(--color-blue);
+  color: var(--color-white);
   position: relative;
+  background: rgba(18, 18, 18, 0.47);
 }
 
 button[data-variant='outline']::before {

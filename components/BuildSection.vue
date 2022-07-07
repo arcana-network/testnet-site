@@ -1,5 +1,5 @@
 <template>
-  <section id="build-dapps">
+  <section id="build">
     <v-container>
       <v-stack
         align="start"
@@ -19,17 +19,13 @@
         <div>
           <v-tabs :tabs-list="tabsList">
             <template #tab-0>
-              <build-overview />
-            </template>
-            <template #tab-1>
               <build-use-cases />
             </template>
-            <template #tab-2>
+            <template #tab-1>
               <build-support />
             </template>
           </v-tabs>
         </div>
-        <div class="build-illustration full-bleed" />
       </v-stack>
     </v-container>
   </section>
@@ -40,7 +36,7 @@ export default {
   name: 'BuildSection',
   data() {
     return {
-      tabsList: ['Overview', 'Use Cases', 'Support'],
+      tabsList: ['Use Cases', 'Support'],
     }
   },
 }
@@ -51,10 +47,6 @@ export default {
 
 section {
   scroll-margin-top: 2rem;
-
-  @media (--viewport-small) {
-    margin-top: 4rem !important;
-  }
 }
 
 .build-heading {
@@ -64,33 +56,6 @@ section {
 
   @media (--viewport-small) {
     font-size: 2.1875rem;
-  }
-}
-
-.full-bleed {
-  margin-left: -10vw;
-  max-width: none;
-  width: 100vw;
-
-  @media (--viewport-small) {
-    margin-left: -5%;
-  }
-}
-
-.build-illustration {
-  margin-top: -10rem;
-  z-index: -1;
-  background-image: url('~assets/images/testnet-build-top-gradient.png'),
-    url('~assets/images/testnet-build-bottom-gradient.png'),
-    url('~assets/images/testnet-build.png');
-  background-size: contain, contain, cover;
-  background-position: top, bottom, top;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: clamp(420px, calc((1155 / 1440) * 80vw), 900px);
-
-  @media (--viewport-small) {
-    margin-top: -5rem;
   }
 }
 </style>

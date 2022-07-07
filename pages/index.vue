@@ -4,6 +4,8 @@
     <main>
       <HeroSection />
       <OverviewSection />
+      <WhatsNewSection />
+      <TestnetFeaturesSection />
       <GetStartedSection />
       <BuildSection />
     </main>
@@ -31,14 +33,10 @@ main {
 
 main > * + *,
 footer {
-  margin-top: 6rem;
+  margin-top: 10rem;
 
   @media (--viewport-medium) {
-    margin-top: 4rem;
-  }
-
-  @media (--viewport-small) {
-    margin-top: 2rem;
+    margin-top: 6rem;
   }
 }
 </style>

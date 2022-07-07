@@ -1,38 +1,14 @@
 <template>
   <div class="quicklinks-cards">
-    <div v-for="quickLink in quickLinks" :key="quickLink.name">
-      <a :href="quickLink.link" target="_blank">
-        <v-card class="quicklinks-card">
-          <v-stack
-            direction="column"
-            sm-direction="column"
-            align="start"
-            gap="1.25rem"
-            sm-gap="1rem"
-          >
-            <v-text class="quicklinks-title" :weight="700" line-height="1.5">
-              {{ quickLink.title }}
-            </v-text>
-            <v-stack
-              direction="row"
-              align="center"
-              justify="center"
-              gap=".5rem"
-            >
-              <v-text
-                class="quicklinks-link-text"
-                :weight="400"
-                line-height="1.4"
-                color="secondary"
-              >
-                {{ quickLink.linkText }}
-              </v-text>
-              <v-image class="quicklinks-arrow" path="images/arrow-right.svg" />
-            </v-stack>
-          </v-stack>
-        </v-card>
-      </a>
-    </div>
+    <v-card v-for="quickLink in quickLinks" :key="quickLink.name" class="quicklinks-card">
+      <v-stack direction="column" sm-direction="column" align="start" gap="1.25rem" sm-gap="1rem"
+        class="quicklinks-content-container">
+        <v-text class="quicklinks-title" :weight="700" line-height="1.5">
+          {{ quickLink.title }}
+        </v-text>
+        <v-text class="quicklinks-description" line-height="1.5" v-html="quickLink.description" />
+      </v-stack>
+    </v-card>
   </div>
 </template>
 
@@ -44,33 +20,39 @@ export default {
       quickLinks: [
         {
           name: 'docs',
-          title: 'Developer SDK Documentation',
-          link: 'https://docs.arcana.network',
-          linkText: 'View Docs',
+          title: 'Get SDKs',
+          description:
+            'Use <a href="https://www.npmjs.com/org/arcana" target="_blank">npm</a> or yarn to install Arcana SDKs. Check our <a href="https://github.com/arcana-network" target="_blank">GitHub repositories</a>.',
+        },
+        {
+          name: 'docs',
+          title: 'Developer Docs',
+          description:
+            'See <a href="https://docs.beta.arcana.network/docs/quick-start/" target="_blank">Arcana Quick Start</a> Guide to begin integrating your dApp with Arcana SDKs. <a href="https://docs.beta.arcana.network/docs/whyan/" target="_blank">Understand Arcana Network</a> concepts and how it works.',
         },
         {
           name: 'demo',
-          title: 'Reference Tutorial App',
-          link: 'https://demo.arcana.network',
-          linkText: 'View App',
+          title: 'Sample dApp',
+          description:
+            'Refer to <a href="https://docs.beta.arcana.network/docs/overview_cs/" target="_blank">code samples</a> and <a href="https://github.com/arcana-network/sdk-demo" target="_blank">tutorials on GitHub</a> on how to integrate and use Arcana SDKs. Check out <a href="https://demo.beta.arcana.network" target="_blank">deployed sample dApp</a>.',
+        },
+        {
+          name: 'dashboard',
+          title: 'Dashboard',
+          description:
+            'Go to the <a href="https://dashboard.beta.arcana.network/" target="_blank">Developer Dashboard</a> and register your dApp, configure storage region, user authentication, and wallet experience settings.',
         },
         {
           name: 'discord',
-          title: 'Get Support on Integration',
-          link: 'https://discord.gg/w6ej4FtqYS',
-          linkText: 'Join Discord',
+          title: 'Get Support',
+          description:
+            'Reach out to the Arcana team through our social channels or write to us at <a href="mailto:support@arcana.network">support@arcana.network</a>.',
         },
         {
-          name: 'signup',
-          title: 'Get Started with our SDK',
-          link: 'https://dashboard.arcana.network',
-          linkText: 'Sign up',
-        },
-        {
-          name: 'discourse',
+          name: 'report-bugs',
           title: 'Report Bugs',
-          link: 'https://forum.arcana.network',
-          linkText: 'Submit Bug',
+          description:
+            'Participate in our bug-bounty program. Click here to <a href="https://forum.arcana.network" target="_blank">report bugs</a>.',
         },
       ],
     }
@@ -87,7 +69,7 @@ a {
 
 .quicklinks-cards {
   display: grid;
-  grid-gap: 1.875rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
 
@@ -96,52 +78,36 @@ a {
   }
 
   @media (--viewport-small) {
-    grid-gap: 1.25rem;
+    grid-gap: 1rem;
     grid-template-columns: 1fr;
   }
 }
 
 .quicklinks-card {
-  opacity: 1;
-  transition: opacity 0.15s ease-in;
-
   @media (--viewport-small) {
     padding: 2rem !important;
   }
 }
 
-.quicklinks-card:hover,
-.quicklinks-card:focus {
-  opacity: 0.8;
-  transition: opacity 0.15s ease-in;
+.quicklinks-content-container {
+  height: 100%;
 }
 
 .quicklinks-title {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
   max-width: 12ch;
 
   @media (--viewport-small) {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
     max-width: unset;
   }
 }
 
-.quicklinks-arrow {
-  width: 0.6em;
-}
-
-.btn-submit-bugs {
-  align-self: end;
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 16rem;
+.quicklinks-description {
+  font-size: 1rem;
 
   @media (--viewport-small) {
-    flex-grow: 1;
-    flex-shrink: 1;
-    width: 100%;
+    font-size: 0.875rem;
   }
 }
 </style>
