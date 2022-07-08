@@ -20,7 +20,7 @@
             <v-heading
               class="hero-section-heading-em"
               :level="3"
-              :weight="600"
+              :weight="700"
               line-height="1.2"
             >
               Arcana Beta Testnet
@@ -39,21 +39,22 @@
               class="hero-section-heading"
               line-height="1.2"
               :weight="600"
+              font="serif"
             >
               Welcome!
             </v-heading>
-            <v-stack direction="column">
+            <v-stack gap="0.5rem">
               <v-text
                 class="hero-section-launch"
                 line-height="1.5"
-                :weight="400"
+                :weight="500"
               >
                 It's time to put privacy front and center.
               </v-text>
               <v-text
                 class="hero-section-launch"
                 line-height="1.5"
-                :weight="600"
+                :weight="700"
               >
                 Let's build.
               </v-text>
@@ -129,7 +130,7 @@ section {
 }
 
 .hero-section-container {
-  margin-top: 6vh;
+  margin-top: 12vh;
   float: right;
 
   @media (--viewport-small) {
@@ -153,19 +154,22 @@ section {
 .hero-section-heading-em {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.125rem;
-  text-transform: uppercase;
   max-width: 44rem;
 
   @media (--viewport-small) {
-    font-size: 2.1875rem;
     text-align: center;
   }
 }
 
+.hero-section-heading-em:first-child {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+  letter-spacing: 0.375rem;
+}
+
 .hero-section-heading-em:nth-child(2) {
-  font-size: 4.5rem;
-  text-transform: none;
+  font-size: 3.875rem;
 
   @media (--viewport-small) {
     font-size: 2.5rem;
@@ -192,8 +196,12 @@ section {
 }
 
 .cta-button {
-  padding: 1.25rem 1.5rem;
-  width: 14rem;
+  padding: 0;
+  width: 14.375rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px !important;
 
   @media (--viewport-small) {
@@ -206,7 +214,7 @@ section {
 }
 
 .cta-icon > img {
-  height: 3.75rem;
+  height: 3.125rem;
   vertical-align: middle;
 }
 
