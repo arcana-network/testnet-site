@@ -1,36 +1,97 @@
 <template>
   <section>
     <v-container>
-      <v-stack class="hero-section-container" align="start" sm-align="center" direction="column" gap="30px">
-        <v-stack align="start" sm-align="center" direction="column" sm-direction="column" gap="2.5rem" sm-gap="1.25rem">
+      <v-stack
+        class="hero-section-container"
+        align="start"
+        sm-align="center"
+        direction="column"
+        gap="30px"
+      >
+        <v-stack
+          align="start"
+          sm-align="center"
+          direction="column"
+          sm-direction="column"
+          gap="2.5rem"
+          sm-gap="1.25rem"
+        >
           <div>
-            <v-heading class="hero-section-heading-em" :level="1" :weight="600" line-height="1.2" color="secondary">
+            <v-heading
+              class="hero-section-heading-em"
+              :level="3"
+              :weight="600"
+              line-height="1.2"
+            >
               Arcana Beta Testnet
             </v-heading>
-            <v-heading class="hero-section-heading-em" :level="1" :weight="700" line-height="1.2">
+            <v-heading
+              class="hero-section-heading-em"
+              :level="1"
+              :weight="700"
+              line-height="1.2"
+            >
               Quantum Ascent
             </v-heading>
           </div>
           <div>
-            <v-heading class="hero-section-heading" line-height="1.2" :weight="600">
+            <v-heading
+              class="hero-section-heading"
+              line-height="1.2"
+              :weight="600"
+            >
               Welcome!
             </v-heading>
             <v-stack direction="column">
-              <v-text class="hero-section-launch" line-height="1.5" :weight="400">
+              <v-text
+                class="hero-section-launch"
+                line-height="1.5"
+                :weight="400"
+              >
                 It's time to put privacy front and center.
               </v-text>
-              <v-text class="hero-section-launch" line-height="1.5" :weight="600">
+              <v-text
+                class="hero-section-launch"
+                line-height="1.5"
+                :weight="600"
+              >
                 Let's build.
               </v-text>
             </v-stack>
           </div>
         </v-stack>
-        <v-stack align="center" direction="row" sm-direction="column" justify="center" gap="2rem" sm-gap="1rem" wrap>
-          <v-button class="cta-button" :action="() => handleViewDocs()" type="button" label="View Docs"
-            label-transform="uppercase" label-size="1rem" :label-weight="600" />
-          <v-button class="cta-button" :action="() => handleGoToDashboard()" variant="outline" label="Go to Dashboard"
-            label-transform="uppercase" label-size="1rem" :label-weight="600" />
-          <a href="https://discord.gg/w6ej4FtqYS" title="Join Discord" class="cta-icon">
+        <v-stack
+          align="center"
+          direction="row"
+          sm-direction="column"
+          justify="center"
+          gap="2rem"
+          sm-gap="1rem"
+          wrap
+        >
+          <v-button
+            class="cta-button"
+            :action="() => handleViewDocs()"
+            type="button"
+            label="View Docs"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
+          />
+          <v-button
+            class="cta-button"
+            :action="() => handleGoToDashboard()"
+            variant="outline"
+            label="Go to Dashboard"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
+          />
+          <a
+            href="https://discord.gg/w6ej4FtqYS"
+            title="Join Discord"
+            class="cta-icon"
+          >
             <img src="@/assets/images/discord.svg" alt="Join Discord" />
           </a>
         </v-stack>
@@ -92,7 +153,8 @@ section {
 .hero-section-heading-em {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 4rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
   max-width: 44rem;
 
   @media (--viewport-small) {
@@ -103,6 +165,7 @@ section {
 
 .hero-section-heading-em:nth-child(2) {
   font-size: 4.5rem;
+  text-transform: none;
 
   @media (--viewport-small) {
     font-size: 2.5rem;
@@ -142,7 +205,7 @@ section {
   vertical-align: middle;
 }
 
-.cta-icon>img {
+.cta-icon > img {
   height: 3.75rem;
   vertical-align: middle;
 }
