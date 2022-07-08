@@ -8,7 +8,7 @@
   --color-orange: #ff6826;
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Sora', sans-serif;
-  --dark-theme-bg: #333;
+  --theme-background: #121212;
 }
 
 /* Custom Scrollbar for all elements */
@@ -43,7 +43,7 @@ html:focus-within {
 }
 
 body {
-  background: #0f0908;
+  background: var(--theme-background);
   overflow-x: hidden;
   min-height: 100vh;
 }
