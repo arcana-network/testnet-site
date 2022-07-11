@@ -63,7 +63,7 @@
           <div class="overview-feature">
             <div>
               <v-heading :level="2" class="overview-feature-title">
-                Auth Store
+                Arcana Store
               </v-heading>
             </div>
             <div class="overview-feature-description">
