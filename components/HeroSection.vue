@@ -1,36 +1,98 @@
 <template>
   <section>
     <v-container>
-      <v-stack class="hero-section-container" align="start" sm-align="center" direction="column" gap="30px">
-        <v-stack align="start" sm-align="center" direction="column" sm-direction="column" gap="2.5rem" sm-gap="1.25rem">
+      <v-stack
+        class="hero-section-container"
+        align="start"
+        sm-align="center"
+        direction="column"
+        gap="30px"
+      >
+        <v-stack
+          align="start"
+          sm-align="center"
+          direction="column"
+          sm-direction="column"
+          gap="2.5rem"
+          sm-gap="1.25rem"
+        >
           <div>
-            <v-heading class="hero-section-heading-em" :level="1" :weight="600" line-height="1.2" color="secondary">
+            <v-heading
+              class="hero-section-heading-em"
+              :level="1"
+              :weight="600"
+              line-height="1.2"
+              color="secondary"
+            >
               Arcana Beta Testnet
             </v-heading>
-            <v-heading class="hero-section-heading-em" :level="1" :weight="700" line-height="1.2">
+            <v-heading
+              class="hero-section-heading-em"
+              :level="1"
+              :weight="700"
+              line-height="1.2"
+            >
               Quantum Ascent
             </v-heading>
           </div>
           <div>
-            <v-heading class="hero-section-heading" line-height="1.2" :weight="600">
+            <v-heading
+              class="hero-section-heading"
+              line-height="1.2"
+              :weight="600"
+            >
               Welcome!
             </v-heading>
             <v-stack direction="column">
-              <v-text class="hero-section-launch" line-height="1.5" :weight="400">
+              <v-text
+                class="hero-section-launch"
+                line-height="1.5"
+                :weight="400"
+              >
                 It's time to put privacy front and center.
               </v-text>
-              <v-text class="hero-section-launch" line-height="1.5" :weight="600">
+              <v-text
+                class="hero-section-launch"
+                line-height="1.5"
+                :weight="600"
+              >
                 Let's build.
               </v-text>
             </v-stack>
           </div>
         </v-stack>
-        <v-stack align="center" direction="row" sm-direction="column" justify="center" gap="2rem" sm-gap="1rem" wrap>
-          <v-button class="cta-button" :action="() => handleViewDocs()" type="button" label="View Docs"
-            label-transform="uppercase" label-size="1rem" :label-weight="600" />
-          <v-button class="cta-button" :action="() => handleGoToDashboard()" variant="outline" label="Go to Dashboard"
-            label-transform="uppercase" label-size="1rem" :label-weight="600" />
-          <a href="https://discord.gg/w6ej4FtqYS" title="Join Discord" class="cta-icon">
+        <v-stack
+          align="center"
+          direction="row"
+          sm-direction="column"
+          justify="center"
+          gap="2rem"
+          sm-gap="1rem"
+          wrap
+        >
+          <v-button
+            class="cta-button"
+            :action="() => handleViewDocs()"
+            type="button"
+            label="View Docs"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
+          />
+          <v-button
+            class="cta-button"
+            :action="() => handleGoToDashboard()"
+            variant="outline"
+            label="Go to Dashboard"
+            label-transform="uppercase"
+            label-size="1rem"
+            :label-weight="600"
+          />
+          <a
+            href="https://discord.gg/w6ej4FtqYS"
+            title="Join Discord"
+            class="cta-icon"
+          >
             <img src="@/assets/images/discord.svg" alt="Join Discord" />
           </a>
         </v-stack>
@@ -125,7 +187,7 @@ section {
   left: 0;
   right: 0;
   height: 200px;
-  background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
+  background: linear-gradient(0deg, #121212 24.79%, rgba(18, 18, 18, 0) 98.31%);
 }
 
 .cta-button {
@@ -142,7 +204,7 @@ section {
   vertical-align: middle;
 }
 
-.cta-icon>img {
+.cta-icon > img {
   height: 3.75rem;
   vertical-align: middle;
 }
