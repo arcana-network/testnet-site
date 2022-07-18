@@ -2,7 +2,7 @@
   --color-blue: #13a3fd;
   --color-black: #141414;
   --color-white: #fff;
-  --color-grey: #a8a8a8;
+  --color-grey: #cbcbcb;
   --color-green: #8fff00;
   --color-yellow: #ffc226;
   --color-orange: #ff6826;
@@ -46,6 +46,8 @@ body {
   background: #0f0908;
   overflow-x: hidden;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .color-primary {
