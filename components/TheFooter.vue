@@ -43,7 +43,21 @@
         </v-text>
       </v-stack>
     </v-container>
-    <div class="section-gradient" />
+    <div class="footer-illustration">
+      <img
+        src="@/assets/images/section-gradient-top.svg"
+        class="gradient-top"
+      />
+      <img src="@/assets/images/testnet-footer-bg.png" class="mobile-remove" />
+      <img
+        src="@/assets/images/testnet-footer-bg-mobile.png"
+        class="tablet-remove laptop-remove mobile-show"
+      />
+      <img
+        src="@/assets/images/section-gradient-bottom.svg"
+        class="gradient-bottom"
+      />
+    </div>
   </footer>
 </template>
 
@@ -58,13 +72,6 @@ export default {
 
 footer {
   position: relative;
-  background: url('~assets/images/testnet-footer-bg.png') no-repeat;
-  background-size: cover;
-
-  @media (--viewport-small) {
-    background: url('~assets/images/testnet-footer-bg-mobile.png') no-repeat;
-    background-size: cover;
-  }
 }
 
 .footer-container {
@@ -106,5 +113,34 @@ footer {
   @media (--viewport-small) {
     height: 3rem;
   }
+}
+
+.footer-illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: -8rem;
+  z-index: -1;
+
+  @media (--viewport-large) {
+    margin-top: -8rem;
+    margin-bottom: -16rem;
+  }
+}
+
+.gradient-top {
+  position: absolute;
+  top: 0;
+}
+
+.gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-illustration img {
+  width: 100%;
 }
 </style>

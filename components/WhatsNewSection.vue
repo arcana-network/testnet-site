@@ -51,7 +51,7 @@
     </v-container>
     <div class="features-illustration">
       <img
-        src="@/assets/images/features-gradient-top.png"
+        src="@/assets/images/section-gradient-top.svg"
         class="gradient-top"
       />
       <img
@@ -63,7 +63,7 @@
         class="tablet-remove laptop-remove mobile-show"
       />
       <img
-        src="@/assets/images/features-gradient-bottom.svg"
+        src="@/assets/images/section-gradient-bottom.svg"
         class="gradient-bottom"
       />
     </div>
@@ -151,20 +151,21 @@ export default {
   margin-top: 2rem;
 
   @media (--viewport-large) {
-    margin-top: 4rem;
-    margin-bottom: -12rem;
+    margin-top: -2rem;
+    margin-bottom: -14rem;
     z-index: -1;
   }
 }
 
 .gradient-top {
-  position: relative;
-  margin-bottom: -7.5%;
+  position: absolute;
+  top: 0;
 }
 
 .gradient-bottom {
-  position: relative;
-  margin-top: -30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .features-illustration img {
