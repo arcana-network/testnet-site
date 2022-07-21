@@ -174,6 +174,6 @@ export default {
 
 .release-notes-container {
   margin-top: 3rem;
-  max-width: 36rem;
+  text-align: center;
 }
 </style>
