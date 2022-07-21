@@ -192,7 +192,7 @@ section {
   left: 0;
   right: 0;
   height: 200px;
-  background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
+  background: linear-gradient(0deg, #121212 24.79%, rgba(18, 18, 18, 0) 98.31%);
 }
 
 .cta-button {

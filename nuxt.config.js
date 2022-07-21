@@ -89,7 +89,7 @@ export default {
 
   googleFonts: {
     families: {
-      Montserrat: [500, 600, 700],
+      Montserrat: [300, 500, 600, 700],
       Sora: [300, 400, 500, 600, 700, 800],
     },
     display: 'block',
