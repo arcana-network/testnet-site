@@ -43,7 +43,9 @@
         >
           For a complete list of what's new in our beta release, check our
           product
-          <a href="https://docs.beta.arcana.network/docs/rn_beta"
+          <a
+            href="https://docs.beta.arcana.network/docs/rn_beta"
+            target="_blank"
             >release notes</a
           >.
         </v-text>

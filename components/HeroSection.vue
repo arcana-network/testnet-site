@@ -90,6 +90,7 @@
           />
           <a
             href="https://discord.gg/w6ej4FtqYS"
+            target="_blank"
             title="Join Discord"
             class="cta-icon"
           >
