@@ -1,18 +1,38 @@
 <template>
   <section id="overview">
     <v-container>
-      <v-stack align="start" direction="column" sm-direction="column" gap="1.875rem" sm-gap="1.25rem">
-        <v-heading class="overview-heading" :level="2" line-height="1.2" :weight="700">
+      <v-stack
+        align="start"
+        direction="column"
+        sm-direction="column"
+        gap="1.875rem"
+        sm-gap="1.25rem"
+      >
+        <v-heading
+          class="overview-heading"
+          :level="2"
+          line-height="1.2"
+          :weight="700"
+        >
           Overview
         </v-heading>
         <div>
-          <v-text class="overview-description" color="secondary" :weight="400" line-height="1.5">
+          <v-text
+            class="overview-description"
+            color="secondary"
+            :weight="400"
+            line-height="1.5"
+          >
             Be a part of our testnet ascent.
             <br />
             Get your copy of the SDKs and explore the beta release.
           </v-text>
           <ul class="list-container">
-            <li v-for="description in overviewDescriptionList" :key="description" class="list">
+            <li
+              v-for="description in overviewDescriptionList"
+              :key="description"
+              class="list"
+            >
               <v-text class="list-description">
                 {{ description }}
               </v-text>
@@ -21,7 +41,13 @@
         </div>
       </v-stack>
       <div class="overview-features">
-        <v-stack align="center" sm-align="start" gap="12rem" sm-gap="2rem" justify="center">
+        <v-stack
+          align="center"
+          sm-align="start"
+          gap="12rem"
+          sm-gap="2rem"
+          justify="space-evenly"
+        >
           <div class="icon-container">
             <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
           </div>
@@ -36,7 +62,11 @@
                   your dApp.
                 </v-text>
                 <ul class="list-container">
-                  <li v-for="description in authFeatures" :key="description" class="list">
+                  <li
+                    v-for="description in authFeatures"
+                    :key="description"
+                    class="list"
+                  >
                     <v-text class="list-description">
                       {{ description }}
                     </v-text>
@@ -45,11 +75,14 @@
               </div>
               <div style="margin-top: 2rem">
                 <v-text color="secondary" line-height="1.5" size="1.125rem">
-                  Delegate intricacies of key management to secure Arcana
-                  Auth.
+                  Delegate intricacies of key management to secure Arcana Auth.
                 </v-text>
                 <ul class="list-container">
-                  <li v-for="description in authServices" :key="description" class="list">
+                  <li
+                    v-for="description in authServices"
+                    :key="description"
+                    class="list"
+                  >
                     <v-text class="list-description">
                       {{ description }}
                     </v-text>
@@ -59,7 +92,13 @@
             </div>
           </div>
         </v-stack>
-        <v-stack align="center" sm-align="start" gap="12rem" sm-gap="2rem" justify="center">
+        <v-stack
+          align="center"
+          sm-align="start"
+          gap="12rem"
+          sm-gap="2rem"
+          justify="space-evenly"
+        >
           <div class="overview-feature">
             <div>
               <v-heading :level="2" class="overview-feature-title">
@@ -72,7 +111,11 @@
                 data sovereignty and privacy.
               </v-text>
               <ul class="list-container">
-                <li v-for="description in storeServices" :key="description" class="list">
+                <li
+                  v-for="description in storeServices"
+                  :key="description"
+                  class="list"
+                >
                   <v-text class="list-description">
                     {{ description }}
                   </v-text>
@@ -81,12 +124,24 @@
             </div>
           </div>
           <div class="icon-container">
-            <v-image path="images/arcana-overview-storage.svg" alt="Arcana Storage" />
+            <v-image
+              path="images/arcana-overview-storage.svg"
+              alt="Arcana Storage"
+            />
           </div>
         </v-stack>
-        <v-stack align="center" sm-align="start" gap="12rem" sm-gap="2rem" justify="center">
+        <v-stack
+          align="center"
+          sm-align="start"
+          gap="12rem"
+          sm-gap="2rem"
+          justify="space-evenly"
+        >
           <div class="icon-container">
-            <v-image path="images/arcana-overview-access.svg" alt="Arcana Access" />
+            <v-image
+              path="images/arcana-overview-access.svg"
+              alt="Arcana Access"
+            />
           </div>
           <div class="overview-feature">
             <div>
@@ -99,7 +154,11 @@
                 Let dApp users control who can access their data.
               </v-text>
               <ul class="list-container">
-                <li v-for="description in accessServices" :key="description" class="list">
+                <li
+                  v-for="description in accessServices"
+                  :key="description"
+                  class="list"
+                >
                   <v-text class="list-description">
                     {{ description }}
                   </v-text>
@@ -204,7 +263,7 @@ export default {
   text-align: left;
 }
 
-.overview-features>* {
+.overview-features > * {
   margin-top: 6rem;
 }
 
@@ -233,12 +292,14 @@ export default {
   right: -40%;
   bottom: -40%;
   z-index: -1;
-  background: radial-gradient(50% 50% at 50% 50%,
-      rgba(11, 132, 201, 0.3) 0%,
-      rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(11, 132, 201, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-.icon-container>* {
+.icon-container > * {
   @media (--viewport-medium) {
     width: 10rem;
     margin-top: 1rem;
