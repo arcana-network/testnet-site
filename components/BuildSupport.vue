@@ -31,7 +31,7 @@
       sm-align="center"
       gap="1rem"
     >
-      <a href="https://discord.gg/w6ej4FtqYS" target="__blank">
+      <a href="https://discord.com/invite/XRscu42B8V" target="__blank">
         <v-image
           path="images/discord-white.svg"
           class="build-support-social-link"
