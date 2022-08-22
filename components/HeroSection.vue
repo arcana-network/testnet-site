@@ -89,7 +89,7 @@
             :label-weight="600"
           />
           <a
-            href="https://discord.gg/w6ej4FtqYS"
+            href="https://discord.com/invite/XRscu42B8V"
             target="_blank"
             title="Join Discord"
             class="cta-icon"
