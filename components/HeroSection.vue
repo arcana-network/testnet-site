@@ -89,7 +89,7 @@
             :label-weight="600"
           />
           <a
-            href="https://discord.com/invite/XRscu42B8V"
+            :href="ARCANA_DISCORD_URL"
             target="_blank"
             title="Join Discord"
             class="cta-icon"
@@ -104,8 +104,15 @@
 </template>
 
 <script>
+const ARCANA_DISCORD_URL = process.env.ARCANA_DISCORD_URL
+
 export default {
   name: 'HeroSection',
+  data() {
+    return {
+      ARCANA_DISCORD_URL,
+    }
+  },
   methods: {
     handleViewDocs() {
       window.open('https://docs.beta.arcana.network', '_blank')
