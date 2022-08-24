@@ -31,7 +31,7 @@
       sm-align="center"
       gap="1rem"
     >
-      <a href="https://discord.com/invite/XRscu42B8V" target="__blank">
+      <a :href="ARCANA_DISCORD_URL" target="__blank">
         <v-image
           path="images/discord-white.svg"
           class="build-support-social-link"
@@ -53,8 +53,15 @@
 </template>
 
 <script>
+const ARCANA_DISCORD_URL = process.env.ARCANA_DISCORD_URL
+
 export default {
   name: 'BuildSupport',
+  data() {
+    return {
+      ARCANA_DISCORD_URL,
+    }
+  },
 }
 </script>
 
